@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Application with TailwindCSS
+
+This repository contains a Next.js application styled with TailwindCSS. It is designed to be deployed to AWS S3 with automated updates using GitHub Actions.
+
+## Features
+
+- **Next.js Framework:** Enables server-side rendering and static site generation.
+- **TailwindCSS Integration:** Provides utility-first CSS for rapid UI development.
+- **TypeScript Support:** Ensures type safety and modern JavaScript features.
+- **ESLint & Prettier:** Ensures clean, consistent, and error-free code.
+- **GitHub Actions:** Automates deployments to AWS S3 upon updates to the `main` branch.
+- **Responsive Design:** Fully responsive and mobile-friendly.
+
+---
+
+## Project Structure
+
+```
+.
+├── app/                     # Main application directory
+├── public/                  # Static assets (e.g., images, fonts)
+├── styles/                  # Global CSS files
+├── .github/workflows/       # GitHub Actions for CI/CD
+├── .next/                   # Next.js build artifacts (ignored)
+├── node_modules/            # Project dependencies (ignored)
+├── .env.local               # Local environment variables (ignored)
+├── package.json             # Project dependencies and scripts
+├── tailwind.config.ts       # TailwindCSS configuration
+├── tsconfig.json            # TypeScript configuration
+└── README.md                # Project documentation
+```
+
+---
+
+## Prerequisites
+
+To work with this project, you’ll need the following installed:
+
+- **Node.js** (v18 or higher)
+- **Yarn** (or npm)
+- **AWS CLI** (for manual S3 management)
+- **Git**
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Run the development server
 
-## Learn More
+```bash
+yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Visit `http://localhost:3000` to view your application.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+### Manual Deployment to S3
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Build the application:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   yarn build
+   ```
+
+2. **Export static files:**
+
+   ```bash
+   yarn export
+   ```
+
+3. **Sync with S3 bucket:**
+
+   ```bash
+   aws s3 sync out/ s3://your-s3-bucket-name --delete
+   ```
+
+---
+
+### Automated Deployment with GitHub Actions
+
+This repository is set up to deploy changes to your S3 bucket whenever the `main` branch is updated.
+
+1. Add the following secrets to your GitHub repository:
+    - `AWS_ACCESS_KEY_ID`
+    - `AWS_SECRET_ACCESS_KEY`
+    - `AWS_S3_BUCKET`
+    - `AWS_REGION`
+
+2. Push updates to the `main` branch to trigger deployment.
+
+---
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [AWS S3](https://aws.amazon.com/s3/)
+- [GitHub Actions](https://github.com/features/actions)
+
+---
+
+## Contributing
+
+1. Fork the repository.
+2. Create a feature branch: `git checkout -b feature-name`.
+3. Commit your changes: `git commit -m 'Add feature'`.
+4. Push the branch: `git push origin feature-name`.
+5. Open a Pull Request.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out:
+
+- **Email:** [pgeorgiadis.it@gmail.com](mailto:pgeorgiadis.it@gmail.com)
+- **GitHub:** [p-georgiadis](https://github.com/p-georgiadis)
+- **LinkedIn:** [Panagiotis Georgiadis](https://linkedin.com/in/p-georgiadis)
