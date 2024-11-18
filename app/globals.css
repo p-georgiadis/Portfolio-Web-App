@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes float-css {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+
+@layer utilities {
+  .animate-float-css {
+    animation: float-css 3s ease-in-out infinite;
+  }
+}
+
+/* Custom scrollbar styles */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #6b7280 transparent; /* Thumb and track color */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Track background */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #6b7280; /* Thumb color */
+  border-radius: 4px; /* Rounded corners */
+  border: 2px solid transparent; /* Padding around thumb */
+  background-clip: padding-box; /* Ensures padding inside thumb */
+}
