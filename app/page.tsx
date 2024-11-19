@@ -1,4 +1,3 @@
-// app/page.tsx
 "use client"
 
 import { Button } from './components/ui/Button'
@@ -10,10 +9,10 @@ import { motion } from 'framer-motion'
 export default function Home() {
     return (
         <PageWrapper>
-            <div className="min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center p-8">
-                <div className="relative max-w-3xl text-center space-y-6 z-10">
+            <div className="min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center p-4 md:p-8 mt-16 md:mt-0">
+                <div className="relative max-w-3xl text-center space-y-4 md:space-y-6 z-10">
                     <motion.div
-                        className="mx-auto w-32 h-32 mb-8 relative"
+                        className="mx-auto w-24 h-24 md:w-32 md:h-32 mb-6 md:mb-8 relative"
                         animate={{
                             scale: [1, 1.05, 1],
                             rotate: [0, 5, -5, 0],
@@ -56,8 +55,8 @@ export default function Home() {
                         />
                     </motion.div>
 
-                    <h1 className="text-6xl font-bold tracking-tight">
-                        <span className="font-mono text-4xl block mb-2 text-gray-400">
+                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+                        <span className="font-mono text-2xl md:text-4xl block mb-2 text-gray-400">
                             Hello, I&#39;m
                         </span>
                         <span className="bg-gradient-to-r from-purple-400 to-blue-400
@@ -66,11 +65,11 @@ export default function Home() {
                         </span>
                     </h1>
 
-                    <h2 className="text-2xl font-mono text-gray-400">
+                    <h2 className="text-xl md:text-2xl font-mono text-gray-400">
                         Cloud Engineer | Multi-Cloud Certified | DevOps, AI & Infrastructure Specialist
                     </h2>
 
-                    <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
                         I am passionate about designing and implementing cloud-native solutions, automating
                         infrastructure, and leveraging DevOps practices to optimize IT operations. With expertise in
                         Linux, AWS,
@@ -79,8 +78,7 @@ export default function Home() {
                         that empower businesses with data-driven insights and innovative automation.
                     </p>
 
-                    {/* Navigation Buttons */}
-                    <div className="flex justify-center gap-4 mt-6">
+                    <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 mt-4 md:mt-6">
                         <Button href="/projects" variant="outline">
                             Projects
                         </Button>
@@ -94,11 +92,11 @@ export default function Home() {
 
                     <a
                         href="/Pano Georgiadis Resume.pdf"
-                        className="inline-flex items-center mt-8 text-gray-400
+                        className="inline-flex items-center mt-6 md:mt-8 text-gray-400
                                  hover:text-gray-300 transition-colors group"
                         download
                     >
-                        <span>Download Resume</span>
+                        <span>Resume</span>
                         <DownloadIcon
                             className="w-4 h-4 ml-2 transform group-hover:translate-y-0.5 transition-transform"/>
                     </a>
