@@ -4,7 +4,7 @@ import { ProjectCategory, Project } from './types';
 export const SITE_CONFIG = {
     name: 'Pano Georgiadis',
     role: 'Cloud Engineer',
-    email: 'pano@pgcloud.com',
+    email: 'pano@pgcloud.dev',
     github: 'https://github.com/p-georgiadis',
     linkedin: 'https://linkedin.com/in/p-georgiadis',
 }
