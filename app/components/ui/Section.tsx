@@ -31,7 +31,7 @@ export function Section({
         <section
             ref={ref}
             className={cn(
-                "py-16 sm:py-24 relative z-10",
+                "pt-12 sm:pt-16 pb-8 sm:pb-12 relative z-10",
                 className
             )}
         >
@@ -49,12 +49,12 @@ export function Section({
                 }}
             >
                 <motion.div
-                    className="max-w-2xl mb-8"
+                    className="max-w-2xl mb-4 md:mb-6"
                     variants={variants}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                     <div className="relative inline-block">
-                        <h2 className="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-purple-400 to-blue-400
+                        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-purple-400 to-blue-400
                                      bg-clip-text text-transparent hover:from-purple-500 hover:to-blue-500
                                      transition-all duration-300 ease-in-out backdrop-blur-none">
                             {title}
@@ -69,7 +69,7 @@ export function Section({
 
                     {description && (
                         <motion.p
-                            className="mt-4 text-lg text-gray-400 backdrop-blur-none"
+                            className="mt-4 text-base md:text-lg text-gray-400 backdrop-blur-none"
                             variants={variants}
                             transition={{ duration: 0.5, delay: 0.2 }}
                         >

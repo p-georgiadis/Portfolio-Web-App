@@ -12,7 +12,7 @@ export default function Home() {
             <div className="min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center p-4 md:p-8 mt-16 md:mt-0">
                 <div className="relative max-w-3xl text-center space-y-4 md:space-y-6 z-10">
                     <motion.div
-                        className="mx-auto w-24 h-24 md:w-32 md:h-32 mb-6 md:mb-8 relative"
+                        className="mx-auto w-24 h-24 md:w-48 md:h-48 mb-6 md:mb-8 relative"
                         animate={{
                             scale: [1, 1.05, 1],
                             rotate: [0, 5, -5, 0],
@@ -51,7 +51,7 @@ export default function Home() {
                             alt="Profile"
                             width={128}
                             height={128}
-                            className="rounded-full p-1 bg-[#111] relative"
+                            className="rounded-full p-1 bg-[#111] relative w-24 h-24 md:w-48 md:h-48"
                         />
                     </motion.div>
 
@@ -78,7 +78,7 @@ export default function Home() {
                         that empower businesses with data-driven insights and innovative automation.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 mt-4 md:mt-6">
+                    <div className="flex justify-center gap-4 mt-4 md:mt-6">
                         <Button href="/projects" variant="outline">
                             Projects
                         </Button>

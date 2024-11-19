@@ -20,6 +20,7 @@ export default function Contact() {
             <Section
                 title="Let's Connect"
                 description="Feel free to reach out for collaborations or just to say hi."
+                className="mt-8 sm:mt-6"
             >
                 <div className="space-y-8">
                     <Card

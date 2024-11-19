@@ -16,10 +16,11 @@ export function CertificationCard({ imageSrc, name, issuer, link }: Certificatio
             className="group relative bg-gray-900/50 rounded-lg overflow-hidden
                 transform transition-all duration-300 hover:-translate-y-1
                 border border-gray-800 hover:border-purple-500/50
-                hover:shadow-lg hover:shadow-purple-500/10 w-36 sm:w-40 lg:w-44"
+                hover:shadow-lg hover:shadow-purple-500/10
+                w-full md:w-40 lg:w-44"
         >
-            <div className="p-4 flex flex-col items-center">
-                <div className="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mb-4">
+            <div className="p-2 md:p-4 flex flex-col items-center">
+                <div className="relative w-16 h-16 md:w-28 md:h-28 lg:w-32 lg:h-32 mb-2 md:mb-4">
                     <Image
                         src={imageSrc}
                         alt={name}
@@ -28,10 +29,10 @@ export function CertificationCard({ imageSrc, name, issuer, link }: Certificatio
                         className="object-contain transform transition-transform duration-300 group-hover:scale-105"
                     />
                 </div>
-                <h3 className="text-sm sm:text-base font-medium text-center text-gray-300 group-hover:text-white">
+                <h3 className="text-xs md:text-base font-medium text-center text-gray-300 group-hover:text-white line-clamp-2">
                     {name}
                 </h3>
-                <p className="text-xs text-gray-500 mt-1 text-center">
+                <p className="text-[10px] md:text-xs text-gray-500 mt-1 text-center line-clamp-1">
                     {issuer}
                 </p>
             </div>

@@ -4,7 +4,7 @@ import { ProjectCategory, Project } from './types';
 export const SITE_CONFIG = {
     name: 'Pano Georgiadis',
     role: 'Cloud Engineer',
-    email: 'pgeorgiadis.it@gmail.com',
+    email: 'pano@pgcloud.com',
     github: 'https://github.com/p-georgiadis',
     linkedin: 'https://linkedin.com/in/p-georgiadis',
 }
@@ -1168,7 +1168,7 @@ export const EDUCATION = [
     {
         institution: "The Linux Foundation & The Cloud Native Computing Foundation",
         logo: "/images/linux_foundation_logo.png", // Add the Linux Foundation logo in your public/images folder
-        degree: "Cloud Engineer IT Professional Program",
+        degree: "Cloud Engineer IT Professional Program Bootcamp",
         duration: "Aug 2023 - Jun 2024",
         details: [
             "LF Certified Cloud Technician",
@@ -1179,10 +1179,10 @@ export const EDUCATION = [
     {
         institution: "Visible Edge, Inc.",
         logo: "/images/visible_edge_logo.png", // Add the Visible Edge logo in your public/images folder
-        degree: "Cloud Architect",
+        degree: "Cloud Architect & IT Support",
         duration: "Mar 2023 - Aug 2023",
         details: [
-            "CompTIA A+ and Network+",
+            "CompTIA Trifecta",
             "Microsoft Certified: Azure Fundamentals",
             "AWS Certified Cloud Practitioner",
             "Axelos ITIL 4 Certified",
@@ -1191,7 +1191,7 @@ export const EDUCATION = [
     {
         institution: "Saint John's High School",
         logo: "/images/saint_johns_logo.png", // Add the Saint John's logo in your public/images folder
-        degree: "High School Diploma, General Studies",
+        degree: "High School Diploma",
         duration: "",
         details: [
             "National Honor Society Member",

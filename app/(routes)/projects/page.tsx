@@ -34,11 +34,12 @@ export default function Projects() {
             {/* Render all categories except Open Source first */}
             {Object.entries(PROJECT_CATEGORIES)
                 .filter(([category]) => category !== 'Open Source')
-                .map(([category, description]) => (
+                .map(([category, description], index) => (
                     <Section
                         key={category}
                         title={category}
                         description={description}
+                        className={index === 0 ? "mt-8 sm:mt-6" : "pt-8 sm:pt-12"} // Only add margin to first section
                     >
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                             {projectsByCategory[category as ProjectCategory]?.map((project) => (
@@ -53,10 +54,10 @@ export default function Projects() {
                     </Section>
                 ))}
 
-            {/* Render Open Source section last */}
             <Section
                 title="Open Source"
                 description={PROJECT_CATEGORIES['Open Source']}
+                className="pt-8 sm:pt-12"
             >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {projectsByCategory['Open Source']?.map((project) => (

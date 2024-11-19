@@ -59,10 +59,11 @@ export function Card({
                         {tags.map((tag: string) => (
                             <span
                                 key={tag}
-                                className="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-sm"
+                                className="px-3 py-1.5 bg-gray-800 text-gray-300 rounded-full text-sm
+                                    hover:bg-purple-500/80 transition-colors cursor-pointer"
                             >
                                 {tag}
-                            </span>
+                             </span>
                         ))}
                     </motion.div>
                 )}
@@ -92,10 +93,11 @@ export function Card({
                     {tags.map((tag: string) => (
                         <span
                             key={tag}
-                            className="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-sm"
+                            className="px-3 py-1.5 bg-gray-800 text-gray-300 rounded-full text-sm
+                    hover:bg-purple-500/80 transition-colors cursor-pointer"
                         >
-                            {tag}
-                        </span>
+                {tag}
+            </span>
                     ))}
                 </div>
             )}

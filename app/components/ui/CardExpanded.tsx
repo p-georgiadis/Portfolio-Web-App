@@ -22,12 +22,15 @@ const cardVariants = {
     closed: {
         scale: 0.95,
         opacity: 0,
-        transition: { duration: 0.2 }
+        transition: { duration: 0.15 }  // Reduced from 0.2
     },
     open: {
         scale: 1,
         opacity: 1,
-        transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] }
+        transition: {
+            duration: 0.2,  // Reduced from 0.3
+            ease: [0.16, 1, 0.3, 1]  // Adjusted easing
+        }
     }
 };
 
@@ -35,12 +38,15 @@ const contentVariants = {
     closed: {
         opacity: 0,
         y: 10,
-        transition: { duration: 0.2 }
+        transition: { duration: 0.15 }  // Reduced from 0.2
     },
     open: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.3, delay: 0.1 }
+        transition: {
+            duration: 0.2,  // Reduced from 0.3
+            delay: 0.05  // Reduced from 0.1
+        }
     }
 };
 
@@ -115,8 +121,9 @@ export function ExpandedCard({
                                 variants={textItemVariants}
                                 initial="hidden"
                                 whileInView="visible"
-                                viewport={{ once: true }}
-                                className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full"
+                                viewport={{once: true}}
+                                className="px-3 py-1.5 bg-gray-800 text-gray-300 rounded-full text-sm
+                                    hover:bg-purple-500/80 transition-colors cursor-pointer"
                             >
                                 {tag}
                             </motion.span>
