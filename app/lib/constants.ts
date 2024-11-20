@@ -1134,12 +1134,11 @@ export const EXPERIENCES = [
 ];
 
 export const EDUCATION = [
-    {
-        "institution": "University of Colorado Boulder",
-        "logo": "/images/university_of_colorado.png",
-        "degree": "Master of Science - MS, Computer Science",
-        "duration": "Jan 2024 - Apr 2026",
-        "details": [
+    {   institution: "University of Colorado Boulder",
+        logo: "/images/university_of_colorado.png",
+        degree: "Master of Science - MS, Computer Science",
+        duration: "Jan 2024 - Apr 2026",
+        details: [
             "Focus: Cloud-Native Architecture, Machine Learning, and Systems Engineering",
             "GPA: 4.0",
             "Developed a strong foundation in algorithm design, including dynamic programming, greedy algorithms, and approximation techniques, complemented by advanced data structures and quantum computing concepts.",

@@ -1,5 +1,6 @@
 // app/components/ui/PageWrapper.tsx
 import { Particles } from "./Particles"
+import React from "react";
 
 interface PageWrapperProps {
     children: React.ReactNode;

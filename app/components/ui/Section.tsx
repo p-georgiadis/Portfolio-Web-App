@@ -3,7 +3,7 @@
 
 import { cn } from "@/app/lib/utils";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { useInView } from "framer-motion";
 
 interface SectionProps {
@@ -31,7 +31,7 @@ export function Section({
         <section
             ref={ref}
             className={cn(
-                "pt-12 sm:pt-16 pb-8 sm:pb-12 relative z-10",
+                "pt-8 sm:pt-12 pb-6 sm:pb-8 relative z-10", // Reduced padding values
                 className
             )}
         >
@@ -51,7 +51,7 @@ export function Section({
                 <motion.div
                     className="max-w-2xl mb-4 md:mb-6"
                     variants={variants}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    transition={{duration: 0.5, ease: "easeOut"}}
                 >
                     <div className="relative inline-block">
                         <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-purple-400 to-blue-400
@@ -61,9 +61,9 @@ export function Section({
                         </h2>
                         <motion.div
                             className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400"
-                            initial={{ scaleX: 0 }}
-                            animate={{ scaleX: isInView ? 1 : 0 }}
-                            transition={{ duration: 0.7, delay: 0.3 }}
+                            initial={{scaleX: 0}}
+                            animate={{scaleX: isInView ? 1 : 0}}
+                            transition={{duration: 0.7, delay: 0.3}}
                         />
                     </div>
 
@@ -71,7 +71,7 @@ export function Section({
                         <motion.p
                             className="mt-4 text-base md:text-lg text-gray-400 backdrop-blur-none"
                             variants={variants}
-                            transition={{ duration: 0.5, delay: 0.2 }}
+                            transition={{duration: 0.5, delay: 0.2}}
                         >
                             {description}
                         </motion.p>
@@ -80,7 +80,7 @@ export function Section({
 
                 <motion.div
                     variants={variants}
-                    transition={{ duration: 0.5, delay: 0.4 }}
+                    transition={{duration: 0.5, delay: 0.4}}
                     className="relative z-10 backdrop-blur-none"
                 >
                     {children}

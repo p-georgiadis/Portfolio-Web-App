@@ -51,7 +51,7 @@ export default function About() {
                         />
                     </div>
                     <div className="flex-1 space-y-4">
-                        <h1 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                        <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent leading-normal overflow-visible pb-1">
                             Building Scalable Cloud Solutions<br/>& Pioneering AI-Driven Automation
                         </h1>
                         <p className="text-gray-400 text-base md:text-lg leading-relaxed">
