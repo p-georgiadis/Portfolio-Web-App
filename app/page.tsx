@@ -47,7 +47,7 @@ export default function Home() {
                             }}
                         />
                         <Image
-                            src="/images/profile.png"
+                            src="/images/profile_logo_transition.gif"
                             alt="Profile"
                             width={128}
                             height={128}
