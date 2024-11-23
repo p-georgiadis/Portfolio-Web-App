@@ -91,12 +91,12 @@ export default function Home() {
                     </div>
 
                     <a
-                        href="/Pano Georgiadis Resume.pdf"
+                        href="/Pano Georgiadis Résumé.pdf"
                         className="inline-flex items-center mt-6 md:mt-8 text-gray-400
                                  hover:text-gray-300 transition-colors group"
                         download
                     >
-                        <span>Resume</span>
+                        <span>Résumé</span>
                         <DownloadIcon
                             className="w-4 h-4 ml-2 transform group-hover:translate-y-0.5 transition-transform"/>
                     </a>

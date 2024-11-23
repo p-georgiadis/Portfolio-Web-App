@@ -1137,7 +1137,7 @@ export const EDUCATION = [
     {   institution: "University of Colorado Boulder",
         logo: "/images/university_of_colorado.png",
         degree: "Master of Science - MS, Computer Science",
-        duration: "Jan 2024 - Apr 2026",
+        duration: "Jan 2024 - Apr 2025",
         details: [
             "Focus: Cloud-Native Architecture, Machine Learning, and Systems Engineering",
             "GPA: 4.0",

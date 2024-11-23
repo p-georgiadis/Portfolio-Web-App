@@ -30,7 +30,7 @@ export default function Contact() {
                                 <span>Email</span>
                             </div>
                         }
-                        description={`You can reach me at ${SITE_CONFIG.email}.`}
+                        description={`You can reach me at ${SITE_CONFIG.email}`}
                         className="hover:bg-gray-800/50 transition-all hover:-translate-y-1 hover:border-gray-700"
                     >
                         <div className="flex justify-start mt-4">

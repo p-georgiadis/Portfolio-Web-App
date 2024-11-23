@@ -80,7 +80,7 @@ export default function About() {
                             machine learning with robust cloud solutions for impactful results.
                         </p>
                         <div className="flex gap-4 pt-4">
-                            <Button href="/Pano Georgiadis Resume.pdf" download>Resume</Button>
+                            <Button href="/Pano Georgiadis Résumé.pdf" download>Résumé</Button>
                             <Button href="/contact" variant="outline">Contact Me</Button>
                         </div>
                     </div>
