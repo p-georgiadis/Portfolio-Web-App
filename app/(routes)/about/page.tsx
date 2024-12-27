@@ -150,7 +150,7 @@ export default function About() {
                 </div>
 
                 {/* Linux Foundation and Additional Certifications in a grid */}
-                <div className="grid lg:grid-cols-2 gap-2">
+                <div className="grid lg:grid-cols-2 gap-1">
                     <div className="space-y-3 md:space-y-6">
                         <h3 className="text-xl md:text-2xl font-semibold text-gray-200">The Linux Foundation</h3>
                         <div className="grid grid-cols-3 gap-2 md:flex md:overflow-x-auto md:space-x-4 py-4">
