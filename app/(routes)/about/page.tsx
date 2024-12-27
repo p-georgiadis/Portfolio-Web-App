@@ -149,35 +149,32 @@ export default function About() {
                     </div>
                 </div>
 
-                {/* Linux Foundation and Additional Certifications in a grid */}
-                <div className="grid lg:grid-cols-2 gap-1">
-                    <div className="space-y-3 md:space-y-6">
-                        <h3 className="text-xl md:text-2xl font-semibold text-gray-200">The Linux Foundation</h3>
-                        <div className="grid grid-cols-3 gap-2 md:flex md:overflow-x-auto md:space-x-4 py-4">
-                            {LINUX_FOUNDATION_CERTS.map((cert) => (
-                                <CertificationCard
-                                    key={cert.name}
-                                    imageSrc={cert.imageSrc}
-                                    name={cert.name}
-                                    issuer={cert.issuer}
-                                    link={cert.link}
-                                />
-                            ))}
-                        </div>
+                {/* Linux Foundation and Additional Certifications */}
+                <div className="space-y-3 md:space-y-6">
+                    <h3 className="text-xl md:text-2xl font-semibold text-gray-200">The Linux Foundation</h3>
+                    <div className="grid grid-cols-3 gap-2 md:flex md:overflow-x-auto md:space-x-4 py-4">
+                        {LINUX_FOUNDATION_CERTS.map((cert) => (
+                            <CertificationCard
+                                key={cert.name}
+                                imageSrc={cert.imageSrc}
+                                name={cert.name}
+                                issuer={cert.issuer}
+                                link={cert.link}
+                            />
+                        ))}
                     </div>
-                    <div className="space-y-3 md:space-y-6">
-                        <h3 className="text-xl md:text-2xl font-semibold text-gray-200">Additional Certifications</h3>
-                        <div className="grid grid-cols-3 gap-2 md:flex md:overflow-x-auto md:space-x-4 py-4">
-                            {OTHER_CERTS.map((cert) => (
-                                <CertificationCard
-                                    key={cert.name}
-                                    imageSrc={cert.imageSrc}
-                                    name={cert.name}
-                                    issuer={cert.issuer}
-                                    link={cert.link}
-                                />
-                            ))}
-                        </div>
+
+                    <h3 className="text-xl md:text-2xl font-semibold text-gray-200">Additional Certifications</h3>
+                    <div className="grid grid-cols-3 gap-2 md:flex md:overflow-x-auto md:space-x-4 py-4">
+                        {OTHER_CERTS.map((cert) => (
+                            <CertificationCard
+                                key={cert.name}
+                                imageSrc={cert.imageSrc}
+                                name={cert.name}
+                                issuer={cert.issuer}
+                                link={cert.link}
+                            />
+                        ))}
                     </div>
                 </div>
             </Section>
