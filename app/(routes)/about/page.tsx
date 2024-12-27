@@ -153,31 +153,29 @@ export default function About() {
                 <div className="grid lg:grid-cols-2 gap-2">
                     <div className="space-y-3 md:space-y-6">
                         <h3 className="text-xl md:text-2xl font-semibold text-gray-200">The Linux Foundation</h3>
-                        <div className="grid grid-cols-3 gap-2 md:flex md:overflow-x-auto md:space-x-4 lg:flex lg:flex-wrap lg:space-x-0 lg:gap-4 py-4">
+                        <div className="grid grid-cols-3 gap-2 md:flex md:overflow-x-auto md:space-x-4 py-4">
                             {LINUX_FOUNDATION_CERTS.map((cert) => (
-                                <div key={cert.name} className="lg:w-auto lg:flex-shrink-0">
-                                    <CertificationCard
-                                        imageSrc={cert.imageSrc}
-                                        name={cert.name}
-                                        issuer={cert.issuer}
-                                        link={cert.link}
-                                    />
-                                </div>
+                                <CertificationCard
+                                    key={cert.name}
+                                    imageSrc={cert.imageSrc}
+                                    name={cert.name}
+                                    issuer={cert.issuer}
+                                    link={cert.link}
+                                />
                             ))}
                         </div>
                     </div>
                     <div className="space-y-3 md:space-y-6">
                         <h3 className="text-xl md:text-2xl font-semibold text-gray-200">Additional Certifications</h3>
-                        <div className="grid grid-cols-3 gap-2 md:flex md:overflow-x-auto md:space-x-4 lg:flex lg:flex-wrap lg:space-x-0 lg:gap-4 py-4">
+                        <div className="grid grid-cols-3 gap-2 md:flex md:overflow-x-auto md:space-x-4 py-4">
                             {OTHER_CERTS.map((cert) => (
-                                <div key={cert.name} className="lg:w-auto lg:flex-shrink-0">
-                                    <CertificationCard
-                                        imageSrc={cert.imageSrc}
-                                        name={cert.name}
-                                        issuer={cert.issuer}
-                                        link={cert.link}
-                                    />
-                                </div>
+                                <CertificationCard
+                                    key={cert.name}
+                                    imageSrc={cert.imageSrc}
+                                    name={cert.name}
+                                    issuer={cert.issuer}
+                                    link={cert.link}
+                                />
                             ))}
                         </div>
                     </div>
