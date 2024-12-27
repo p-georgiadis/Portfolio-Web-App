@@ -930,18 +930,6 @@ export const SKILLS = {
 
 export const CLOUD_CERTS = [
     {
-        name: "Azure Fundamentals",
-        issuer: "Microsoft",
-        imageSrc: "https://images.credly.com/size/340x340/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png",
-        link: "https://www.credly.com/badges/d330b1a1-77f7-4af9-a56e-40af2c879f0b",
-    },
-    {
-        name: "AWS Cloud Practitioner",
-        issuer: "Amazon Web Services",
-        imageSrc: "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
-        link: "https://www.credly.com/badges/8c7eed6e-c9af-4e24-a9b3-b3f41396d03b",
-    },
-    {
         name: "AWS Solutions Architect",
         issuer: "Amazon Web Services",
         imageSrc: "https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
@@ -952,6 +940,24 @@ export const CLOUD_CERTS = [
         issuer: "CNCF",
         imageSrc: "https://images.credly.com/size/340x340/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png",
         link: "https://www.credly.com/badges/01312f65-ea8d-4d5a-bbd0-37513e5d6d2e",
+    },
+    {
+        name: "HashiCorp Certified: Terraform Associate (003)",
+        issuer: "HashiCorp",
+        imageSrc: "https://images.credly.com/size/340x340/images/85b9cfc4-257a-4742-878c-4f7ab4a2631b/image.png",
+        link: "https://www.credly.com/badges/d59182d3-f49e-4d8d-837e-e85e4507cc90",
+    },
+    {
+        name: "Azure Fundamentals",
+        issuer: "Microsoft",
+        imageSrc: "https://images.credly.com/size/340x340/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png",
+        link: "https://www.credly.com/badges/d330b1a1-77f7-4af9-a56e-40af2c879f0b",
+    },
+    {
+        name: "AWS Cloud Practitioner",
+        issuer: "Amazon Web Services",
+        imageSrc: "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
+        link: "https://www.credly.com/badges/8c7eed6e-c9af-4e24-a9b3-b3f41396d03b",
     },
     // Add cloud certs here
 ];

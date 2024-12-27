@@ -120,7 +120,7 @@ export default function About() {
                         </div>
                     </div>
                     <div className="space-y-3 md:space-y-6">
-                        <h3 className="text-xl md:text-2xl font-semibold text-gray-200">Linux Foundation</h3>
+                        <h3 className="text-xl md:text-2xl font-semibold text-gray-200">The Linux Foundation</h3>
                         <div className="grid grid-cols-3 gap-2 md:flex md:overflow-x-auto md:space-x-4 py-4">
                             {LINUX_FOUNDATION_CERTS.map((cert) => (
                                 <CertificationCard
