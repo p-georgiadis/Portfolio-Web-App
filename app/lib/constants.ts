@@ -944,7 +944,7 @@ export const CLOUD_CERTS = [
     {
         name: "HashiCorp Certified: Terraform Associate (003)",
         issuer: "HashiCorp",
-        imageSrc: "https://images.credly.com/size/340x340/images/85b9cfc4-257a-4742-878c-4f7ab4a2631b/image.png",
+        imageSrc: "https://images.credly.com/size/340x340/images/ed4be915-68f8-428a-b332-40ded9084ee5/blob",
         link: "https://www.credly.com/badges/d59182d3-f49e-4d8d-837e-e85e4507cc90",
     },
     {
