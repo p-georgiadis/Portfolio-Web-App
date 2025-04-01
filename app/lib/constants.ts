@@ -964,44 +964,51 @@ export const CLOUD_CERTS = [
 
 export const COMPTIA_CERTS = [
     {
+        name: "CloudNetX",
+        issuer: "CompTIA",
+        imageSrc: "https://images.credly.com/size/340x340/images/16b097aa-10b3-4c90-9f96-f7b43ffa6cb4/blob",
+        link: "https://www.credly.com/badges/4241a986-748f-4f60-ba3b-4706209ed841",
+        stackable: false
+    },
+    {
         name: "Security+",
         issuer: "CompTIA",
-        imageSrc: "https://images.credly.com/size/340x340/images/74790a75-8451-400a-8536-92d792c5184a/CompTIA_Security_2Bce.png",
+        imageSrc: "https://images.credly.com/size/340x340/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob",
         link: "https://www.credly.com/badges/cc5ce734-5444-419c-9ebc-89cb56d352cd",
         stackable: false
     },
     {
         name: "A+",
         issuer: "CompTIA",
-        imageSrc: "https://images.credly.com/size/340x340/images/63482325-a0d6-4f64-ae75-f5f33922c7d0/CompTIA_A_2Bce.png",
+        imageSrc: "https://images.credly.com/size/340x340/images/f6d62c5d-1e1d-4de6-92ee-8dc8c80b1c7b/blob",
         link: "https://www.credly.com/badges/9df5f69e-3a20-4313-b1c2-7f0782501f01",
         stackable: false
     },
     {
         name: "Network+",
         issuer: "CompTIA",
-        imageSrc: "https://images.credly.com/size/340x340/images/e1fc05b2-959b-45a4-8d20-124b1df121fe/CompTIA_Network_2Bce.png",
+        imageSrc: "https://images.credly.com/size/340x340/images/c70ba73e-3c8a-46fa-9d60-4a9af94ad662/blob",
         link: "https://www.credly.com/badges/3e26e203-56ab-4f06-9de9-d7c382a98936",
         stackable: false
     },
     {
         name: "Cloud+",
         issuer: "CompTIA",
-        imageSrc: "https://images.credly.com/size/340x340/images/4a1a7339-ce0f-458a-9ee7-620416e68c19/CompTIA_Cloud_2Bce.png",
+        imageSrc: "https://images.credly.com/size/340x340/images/b2e3c623-cc4a-4f0c-8a3b-aa6231e138fe/blob",
         link: "https://www.credly.com/badges/3834146c-4220-4631-817e-50ef45bfcfec",
         stackable: false
     },
     {
         name: "Linux+",
         issuer: "CompTIA",
-        imageSrc: "https://images.credly.com/size/340x340/images/6edb32c5-37d8-4fd4-98cd-2811932f0185/CompTIA_Linux_2Bce.png",
+        imageSrc: "https://images.credly.com/size/340x340/images/c8ba8fa6-ab8b-4df7-879f-4ae7b98b2765/blob",
         link: "https://www.credly.com/badges/c762b6ef-03f8-406d-81ac-8cd917b8da18",
         stackable: false
     },
     {
         name: "Server+",
         issuer: "CompTIA",
-        imageSrc: "https://images.credly.com/size/340x340/images/273d9e31-b6a6-449d-8a77-9213a2618f6d/CompTIA_Server_2B.png",
+        imageSrc: "https://images.credly.com/size/340x340/images/8293972f-573a-4d0b-be14-0bcb65e80b16/blob",
         link: "https://www.credly.com/badges/58aea155-f60a-4bb4-bb2b-92294cb891bb",
         stackable: false
     },
