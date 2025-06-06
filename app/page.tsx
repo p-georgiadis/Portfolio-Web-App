@@ -56,28 +56,28 @@ export default function Home() {
                     </motion.div>
 
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-                        <span className="font-mono text-2xl md:text-4xl block mb-2 text-gray-400">
-                            Hello, I&#39;m
-                        </span>
-                        <span className="bg-gradient-to-r from-purple-400 to-blue-400
-                                       bg-clip-text text-transparent">
-                            Pano Georgiadis
-                        </span>
+                    <span className="font-mono text-2xl md:text-4xl block mb-2 text-gray-400">
+                        Hello, I&#39;m
+                    </span>
+                                        <span className="bg-gradient-to-r from-purple-400 to-blue-400
+                                   bg-clip-text text-transparent">
+                        Pano Georgiadis
+                    </span>
                     </h1>
 
                     <h2 className="text-xl md:text-2xl font-mono text-gray-400">
-                        Cloud Engineer | Multi-Cloud Certified | DevOps, AI & Infrastructure Specialist
+                        Recent MS Graduate | Cloud & DevOps Engineer | Infrastructure Specialist
                     </h2>
 
                     <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
-                        I am passionate about designing and implementing cloud-native solutions, automating
-                        infrastructure, and leveraging DevOps practices to optimize IT operations. With expertise in
-                        Linux, AWS,
-                        Kubernetes, and cutting-edge machine learning projects, I specialize in building scalable,
-                        AI-driven systems
-                        that empower businesses with data-driven insights and innovative automation.
+                        I architect and deploy enterprise-grade cloud infrastructure with proven business impact—
+                        delivering 90% cost reductions and 99.9% uptime as the sole IT professional for a growing
+                        organization.
+                        With a recently completed MS in Computer Science (4.0 GPA) and 20+ certifications spanning AWS,
+                        Azure, Terraform
+                        and Kubernetes, I specialize in building scalable, resilient platforms through intelligent automation,
+                        Infrastructure as Code, and modern DevOps practices.
                     </p>
-
                     <div className="flex justify-center gap-4 mt-4 md:mt-6">
                         <Button href="/projects" variant="outline">
                             Projects

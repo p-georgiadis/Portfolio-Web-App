@@ -3,7 +3,7 @@ import { ProjectCategory, Project } from './types';
 
 export const SITE_CONFIG = {
     name: 'Pano Georgiadis',
-    role: 'Cloud Engineer',
+    role: 'Cloud Engineer | Multi-Cloud Certified | DevOps, AI & Infrastructure Specialist',
     email: 'pano@pgcloud.dev',
     github: 'https://github.com/p-georgiadis',
     linkedin: 'https://linkedin.com/in/p-georgiadis',
@@ -777,129 +777,60 @@ export const PROJECTS: Project[] = [
 ]
 
 export const SKILLS = {
-    cloud: [
-        'AWS (EC2, ECS, RDS, S3, VPC, IAM)',
-        'GCP',
-        'Azure',
-        'DigitalOcean',
-        'Cloud-Native Architecture',
-        'Cloud Migration',
-        'Cloud Automation',
-        'Cloud Applications',
-        'Cloud Administration',
-        'IBM Cloud',
+    cloud_platforms: [
+        'AWS Solutions Architect',
+        'Azure Administrator Associate',
+        'EC2, S3, RDS, Lambda, ECS, EKS',
+        'Azure App Service, Azure Functions, Virtual Machines',
+        'Storage Accounts, Resource Manager, ARM Templates, Bicep',
+        'GCP, Multi-Cloud'
     ],
-    devops: [
-        'Docker',
-        'Kubernetes',
-        'Terraform',
-        'Ansible',
-        'Jenkins',
-        'Git',
-        'CI/CD',
-        'Infrastructure as Code',
-        'Prometheus',
-        'Grafana',
-        'ELK Stack',
-        'CloudWatch',
-        'Nagios',
-    ],
-    linux: [
-        'Ubuntu',
-        'Debian',
-        'CentOS',
-        'RHEL',
-        'Shell Scripting',
-        'Cron Jobs',
-        'Linux System Administration',
-        'LFCS Certified Systems Administrator',
-        'CompTIA Linux+',
-    ],
-    networking: [
-        'TCP/IP',
-        'HTTP',
-        'DNS',
-        'TLS',
-        'Load Balancing',
-        'Firewalls',
-        'VPNs',
-        'Subnetting',
-        'VLAN',
-        'Wireless (WiFi)',
-        'IP Networking',
-    ],
-    scripting_and_automation: [
-        'Bash',
-        'Python',
-        'PowerShell',
-        'Automation Scripts',
+    infrastructure_as_code: [
+        'Terraform Associate Certified',
+        'HashiCorp Terraform',
+        'AWS CloudFormation',
+        'Azure ARM, Azure Bicep',
         'Infrastructure Automation',
+        'Policy as Code, GitOps',
+        'Infrastructure Pipelines'
     ],
-    databases: [
-        'SQL (MySQL, PostgreSQL)',
-        'NoSQL (MongoDB)',
-        'AWS RDS',
-        'Database Design',
-        'Database Management System (DBMS)',
-        'Azure SQL',
+    container_orchestration: [
+        'Kubernetes Administrator (CKA)',
+        'Docker, Helm Charts',
+        'Container Registry, Kubernetes Operators',
+        'Pod Security, Service Mesh',
+        'Container Orchestration, Microservices'
     ],
-    monitoring_and_logging: [
-        'Prometheus',
-        'Grafana',
-        'CloudWatch',
-        'ELK Stack',
-        'Nagios',
+    devops_cicd: [
+        'GitHub Actions, Azure DevOps, Jenkins',
+        'CI/CD Pipelines, Build Automation',
+        'Deployment Automation, Configuration Management',
+        'Ansible, Infrastructure Deployment'
     ],
-    languages: [
-        'Python',
-        'TypeScript',
-        'JavaScript',
-        'Java',
-        'Node.js',
-        'Bash',
-        'HTML',
-        'CSS',
-        'Mandarin',
-        'Greek',
+    security_compliance: [
+        'CompTIA Security+, CompTIA CloudNetX',
+        'Zero Trust, IAM, RBAC',
+        'Network Security, WAF, Security Groups',
+        'Vulnerability Management',
+        'Compliance (SOC 2, HIPAA)'
     ],
-    frontend: [
-        'React',
-        'TailwindCSS',
-        'Responsive Design',
-        'Accessibility',
-        'Document Object Model (DOM)',
-        'Frontend Development',
-        'Frontend Design',
-        'Debugging Code',
-        'Web Applications',
-        'Web Performance Optimization',
+    linux_systems: [
+        'LFCS Certified, LFCT Certified',
+        'Red Hat, Ubuntu, CentOS',
+        'Shell Scripting, System Administration',
+        'Performance Tuning, Log Management, Troubleshooting'
     ],
-    frameworks: [
-        'Node.js',
-        'Express.js',
-        'Next.js',
-        'React',
-        'TailwindCSS',
-        'Sass',
+    monitoring_sre: [
+        'Prometheus, Grafana, ELK Stack',
+        'CloudWatch, Azure Monitor',
+        'Observability, Alerting, SLI/SLO',
+        'Incident Management, Site Reliability Engineering'
     ],
-    virtualization: [
-        'VMware',
-        'VirtualBox',
-        'Hyper-V',
-        'Virtualization',
-    ],
-    web_development: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'Responsive Design',
-        'Accessibility',
-        'Document Object Model (DOM)',
-        'Frontend Development',
-        'Frontend Design',
-        'Debugging Code',
-        'Web Applications',
-        'Web Performance Optimization',
+    programming: [
+        'Python, Bash, PowerShell',
+        'JavaScript, Node.js, SQL',
+        'REST APIs, SDK Integration',
+        'Automation Scripts, boto3, Azure SDK'
     ],
     machine_learning_and_ai: [
         'Machine Learning',
@@ -934,6 +865,12 @@ export const CLOUD_CERTS = [
         issuer: "Amazon Web Services",
         imageSrc: "https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
         link: "https://www.credly.com/badges/8d22badf-d4c4-41e8-b7f6-1a6797ef2c7e",
+    },
+    {
+        name: "Azure Administrator",
+        issuer: "Microsoft",
+        imageSrc: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg?branch=main",
+        link: "https://learn.microsoft.com/api/credentials/share/en-us/p-georgiadis/43D283DBE1AE2C51?sharingId=F1DDD9D8ACE92FDC",
     },
     {
         name: "Certified Kubernetes Administrator (CKA)",
@@ -1073,6 +1010,12 @@ export const LINUX_FOUNDATION_CERTS = [
         link: "https://www.credly.com/badges/2099eaf8-2ff2-4087-97f9-189912dc4c83",
     },
     {
+        name: "LFCT: Linux Foundation Certified Cloud Technician",
+        issuer: "Linux Foundation",
+        imageSrc: "https://images.credly.com/images/1648c7a8-3d44-4b7f-84d5-986746d9f7d0/image.png",
+        link: "https://www.credly.com/badges/dda5fb2d-48b3-47c1-8edf-68f73cc3d34b",
+    },
+    {
         name: "Cloud Engineer IT Professional Program",
         issuer: "Linux Foundation",
         imageSrc: "https://images.credly.com/size/340x340/images/2f33ded4-8e5e-442f-997d-2e804740ceab/image.png",
@@ -1115,102 +1058,99 @@ export const OTHER_CERTS = [
 
 export const EXPERIENCES = [
     {
-        title: "Owner & System Administrator",
-        company: "Meze LLC",
+        title: "Systems Administrator - Jr. Cloud Engineer", // Updated title
+        company: "Meze LLC, Massachusetts",
         duration: "Mar 2019 - Jan 2025",
         details: [
-            "Administered Linux systems, creating cron jobs and scripts for end-of-day tasks and Raspberry Pi-based VoIP infrastructure in a hybrid environment.",
-            "Deployed and managed AWS EC2 instances with SQL and RDS databases for POS systems and inventory tracking.",
-            "Implemented containerization using AWS ECS, Docker, and CI/CD with GitHub Actions.",
-            "Managed Ubiquiti networking products, configuring 48-port switches with custom NAT, VLANs, and subnets based on business use cases.",
-            "Configured Ubiquiti firewall security gateway and access points, setting up separate WiFi networks for employees and guests with landing page terms and conditions.",
-            "Deployed Nginx, Kubernetes, and Docker containers for on-premise static website hosting with online-ordering, later migrating to a cloud provider.",
-            "Provided technical support and training for over 10 employees on various business equipment, including handhelds, POS systems, serial printers, tablets, and VoIP phone systems.",
-            "Served as the sole point of contact for troubleshooting and assisting staff from diverse backgrounds and age groups.",
-            "Created instructional documentation for software to streamline troubleshooting processes for employees.",
-            "Collaborated with stakeholders, providing quarterly and annual business performance data based on online customer interactions and in-house sales."
+            "Designed and implemented AWS-based infrastructure (EC2, RDS, ECS) for business applications; orchestrated containerized applications using Docker and Kubernetes; created CI/CD pipelines with GitHub Actions; implemented monitoring and logging solutions.",
+            "Architected secure network infrastructure using Ubiquiti products, configuring VLANs, subnets, and custom NAT rules; established network segmentation with separate WiFi networks; managed firewall configurations and security protocols.",
+            "Migrated from traditional PBX to EC2 and Raspberry Pi-based 3CX phone systems with SIP trunking, reducing monthly telecom costs by 90% while achieving 99.9% uptime and enhancing call quality; automated Linux system maintenance with custom scripts and scheduled jobs; implemented Nginx for on-premise web hosting.",
+            "Designed and deployed a hybrid cloud-on-premises environment that maintained critical business functions during 7 power outages and 3 major ISP disruptions, ensuring continuous payment processing and remote operations; served as primary technical resource for a 15-employee organization; created comprehensive technical documentation."
         ],
     },
     {
-        title: "Army Signal Corps",
-        company: "Greek Army",
-        duration: "Jan 2022 - Dec 2023",
+        title: "Signals Corps Specialist", // Updated title
+        company: "Greek Army, Central Macedonia, Greece",
+        duration: "Jan 2022 - Dec 2023", // Updated dates
         details: [
-            "Served under mandatory conscription service as a dual US-Greek citizen, fulfilling a legal obligation for military service in Greece.",
-            "Configured and utilized RADIUS and TACACS+ servers to enhance network security.",
-            "Troubleshot diverse computer systems, communication networks, and surveillance camera setups.",
-            "Orchestrated strategic maintenance and upgrades for communication systems.",
-            "Collaborated with teams to provide technical expertise and training.",
+            "Fulfilled mandatory military service requirement as a US-born citizen with dual Greek citizenship, applying technical skills to military communication systems while meeting conscription obligations.",
+            "Maintained mission-critical military communication networks with 99.98% uptime requirements in high-pressure tactical environments, developing exceptional troubleshooting skills under extreme time constraints.",
+            "Implemented advanced authentication systems including RADIUS and TACACS+ for secure access control across sensitive network infrastructure, ensuring zero security breaches during tenure.",
+            "Operated in 24/7 rotating shift environments responding to priority incidents within 5-minute SLAs, developing exceptional incident management capabilities applicable to cloud infrastructure monitoring.",
+            "Applied military-grade security standards to mission-critical systems while successfully completing 20+ high-stress deployment exercises, demonstrating adaptability and performance excellence under pressure."
         ],
     },
-    // Add more experiences here
 ];
 
 export const EDUCATION = [
-    {   institution: "University of Colorado Boulder",
+    {
+        institution: "University of Colorado Boulder",
         logo: "/images/university_of_colorado.png",
-        degree: "Master of Science - MS, Computer Science",
-        duration: "Jan 2024 - Apr 2025",
+        degree: "Master of Science in Computer Science",
+        duration: "Jan 2023 - May 2025", // Updated dates
+        gpa: "4.0", // Add GPA prominently
+        specializations: [
+            "Software Architecture for Big Data",
+            "Machine Learning",
+            "Networking & Cloud Systems",
+            "Algorithms",
+            "Computing Ethics"
+        ],
+        aiCertificate: "Machine Learning, Robotics, Autonomous Systems, Generative AI",
         details: [
-            "Focus: Cloud-Native Architecture, Machine Learning, and Systems Engineering",
-            "GPA: 4.0",
-            "Developed a strong foundation in algorithm design, including dynamic programming, greedy algorithms, and approximation techniques, complemented by advanced data structures and quantum computing concepts.",
-            "Gained expertise in networking systems, cloud architectures, and Linux-based network configurations, with hands-on experience in designing scalable cloud solutions.",
-            "Mastered core principles of supervised, unsupervised, and deep learning, including neural network architectures, generative AI models, and advanced machine learning techniques.",
-            "Explored ethical dimensions of AI, robotics, and computing applications, fostering a comprehensive understanding of societal and professional responsibilities in technology development.",
-            "Specialized in autonomous systems and robotics, with an emphasis on system modeling, verification, synthesis, path planning, and robotic task execution.",
-            "Acquired practical skills in big data software architecture, focusing on designing and implementing large-scale data-driven systems.",
-            "Deepened knowledge in data mining processes, from pipeline creation to method application and project execution.",
-            "Achieved proficiency in relational database design, SQL, and advanced database technologies, including modeling and future trends.",
-            "Enhanced data visualization capabilities and object-oriented design principles to deliver clear, actionable insights and robust software solutions."
+            "Algorithm Design & Quantum Computing",
+            "Cloud & Network Architecture",
+            "Machine Learning & Neural Networks",
+            "Autonomous Systems & Robotics",
+            "Data Mining & Database Systems",
+            "Software Architecture & OO Design"
         ]
     },
     {
         institution: "Udacity",
-        logo: "/images/udacity_logo.png", // Add the Udacity logo in your public/images folder
-        degree: "Nanodegree, Front End Web Development",
+        logo: "/images/udacity_logo.png",
+        degree: "AI Programming with Python Nanodegree",
+        duration: "Nov 2024 - Mar 2025",
+        details: [
+            "Developed AI applications with Python, NumPy, pandas, and Matplotlib; implemented neural networks with PyTorch",
+            "Applied linear algebra and calculus fundamentals to build and train an image classifier using backpropagation"
+        ]
+    },
+    {
+        institution: "Udacity",
+        logo: "/images/udacity_logo.png",
+        degree: "Front End Web Developer Nanodegree",
         duration: "Aug 2024 - Nov 2024",
         details: [
-            "CSS, Website Layout, Website Components",
-            "JavaScript & the DOM",
-            "Web APIs and Asynchronous Applications",
-            "Build Tools and Single Page Web Apps",
+            "Built responsive web applications with JavaScript, DOM manipulation, asynchronous programming, and Express",
+            "Implemented performance optimization using Webpack, Sass, and service workers for offline functionality"
         ],
     },
     {
         institution: "The Linux Foundation & The Cloud Native Computing Foundation",
-        logo: "/images/linux_foundation_logo.png", // Add the Linux Foundation logo in your public/images folder
-        degree: "Cloud Engineer IT Professional Program Bootcamp",
+        logo: "/images/linux_foundation_logo.png",
+        degree: "Cloud Engineer IT Professional Program",
         duration: "Aug 2023 - Jun 2024",
         details: [
-            "LF Certified Cloud Technician",
-            "LF Certified Linux System Administrator",
-            "CNCF Certified Kubernetes Administrator",
+            "LF Certified Cloud Technician, CNCF Certified Kubernetes Administrator, Advanced Linux system administration"
         ],
     },
     {
         institution: "Visible Edge, Inc.",
-        logo: "/images/visible_edge_logo.png", // Add the Visible Edge logo in your public/images folder
-        degree: "Cloud Architect & IT Support",
+        logo: "/images/visible_edge_logo.png",
+        degree: "Cloud Architecture & IT Support Program",
         duration: "Mar 2023 - Aug 2023",
         details: [
-            "CompTIA Trifecta",
-            "Microsoft Certified: Azure Fundamentals",
-            "AWS Certified Cloud Practitioner",
-            "Axelos ITIL 4 Certified",
+            "CompTIA A+ and Network+, Microsoft Azure Fundamentals, AWS Certified Cloud Practitioner, ITIL 4 Certified"
         ],
     },
     {
         institution: "Saint John's High School",
-        logo: "/images/saint_johns_logo.png", // Add the Saint John's logo in your public/images folder
-        degree: "High School Diploma",
+        logo: "/images/saint_johns_logo.png",
+        degree: "Graduated with Honors",
         duration: "",
         details: [
-            "National Honor Society Member",
-            "AP Mandarin Chinese",
-            "Captain of the Varsity Wrestling Team",
-            "Investment Club",
-            "SJ Jazz Band - Jazz Guitar",
+            "NHS Member, AP Mandarin Chinese, Varsity Wrestling Captain, Investment Club, Jazz Band (Guitar)"
         ],
     },
 ];

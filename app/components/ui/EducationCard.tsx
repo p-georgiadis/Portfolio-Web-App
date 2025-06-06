@@ -8,6 +8,9 @@ interface EducationCardProps {
     institution: string;
     degree: string;
     duration?: string;
+    gpa?: string;
+    specializations?: string[];
+    aiCertificate?: string;
     details: string[];
 }
 
@@ -22,6 +25,9 @@ export function EducationCard({
                                   institution,
                                   degree,
                                   duration,
+                                  gpa,
+                                  specializations,
+                                  aiCertificate,
                                   details,
                               }: EducationCardProps) {
     if (!institution || !degree) {
@@ -50,21 +56,61 @@ export function EducationCard({
                 </div>
             )}
             <div className="flex-1 w-full">
-                <h3 className="text-lg md:text-xl font-semibold text-white text-center md:text-left">{institution}</h3>
-                <p className="text-gray-400 text-center md:text-left">{degree}</p>
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                    <h3 className="text-lg md:text-xl font-semibold text-white text-center md:text-left">{institution}</h3>
+                    {gpa && (
+                        <span className="text-sm md:text-base font-semibold text-purple-400 bg-purple-500/20 px-3 py-1 rounded-full mt-2 md:mt-0 mx-auto md:mx-0 w-fit">
+                            GPA: {gpa}
+                        </span>
+                    )}
+                </div>
+
+                <p className="text-gray-400 text-center md:text-left font-medium">{degree}</p>
+
                 {duration && (
                     <p className="text-sm text-gray-500 mt-1 text-center md:text-left">{duration}</p>
                 )}
-                <ul className="list-disc list-inside mt-3 md:mt-4 space-y-1 md:space-y-2 text-gray-300 text-sm md:text-base">
-                    {details.map((detail, index) => (
-                        <li
-                            key={index}
-                            className="hover:text-purple-400 transition-colors duration-200 pl-4 -indent-4"
-                        >
-                            {detail}
-                        </li>
-                    ))}
-                </ul>
+
+                {specializations && specializations.length > 0 && (
+                    <div className="mt-3">
+                        <h4 className="text-sm font-semibold text-purple-300 mb-2 text-center md:text-left">Specializations:</h4>
+                        <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                            {specializations.map((spec, index) => (
+                                <span
+                                    key={index}
+                                    className="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded-md border border-gray-600/50 hover:border-purple-500/50 transition-colors duration-200"
+                                >
+                                    {spec}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {aiCertificate && (
+                    <div className="mt-3">
+                        <h4 className="text-sm font-semibold text-purple-300 mb-2 text-center md:text-left">Artificial Intelligence Graduate Certificate:</h4>
+                        <p className="text-sm text-gray-300 bg-gradient-to-r from-purple-900/30 to-blue-900/30 p-2 rounded-md border border-purple-500/30 text-center md:text-left">
+                            {aiCertificate}
+                        </p>
+                    </div>
+                )}
+
+                {details && details.length > 0 && (
+                    <div className="mt-4">
+                        <h4 className="text-sm font-semibold text-purple-300 mb-2 text-center md:text-left">Key Coursework:</h4>
+                        <ul className="list-disc list-inside space-y-1 md:space-y-2 text-gray-300 text-sm md:text-base">
+                            {details.map((detail, index) => (
+                                <li
+                                    key={index}
+                                    className="hover:text-purple-400 transition-colors duration-200 pl-4 -indent-4"
+                                >
+                                    {detail}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
             </div>
         </motion.div>
     );
