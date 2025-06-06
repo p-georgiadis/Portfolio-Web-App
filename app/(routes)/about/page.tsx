@@ -70,10 +70,8 @@ export default function About() {
                             DevOps</strong> (AWS, Azure, Kubernetes, Docker, Terraform),
                             <strong className="text-purple-400">CI/CD automation</strong> (GitHub Actions, ArgoCD), and
                             <strong className="text-purple-400">AI/ML integration</strong> (deep learning, NLP, computer
-                            vision).
-                            I've delivered measurable business impact including 90% cost reduction through cloud
-                            migration,
-                            99.9% uptime for critical systems, and hybrid cloud architectures that maintained operations
+                            vision). I have delivered measurable business impact including 90% cost reduction through cloud
+                            migration, 99.9% uptime for critical systems, and hybrid cloud architectures that maintained operations
                             through major outages.
                         </p>
                         <p className="text-gray-400 text-base md:text-lg leading-relaxed">
