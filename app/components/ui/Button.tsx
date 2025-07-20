@@ -53,13 +53,27 @@ export function Button({
     const classes = cn(baseStyles, variants[variant], sizes[size], className);
 
     if (href) {
+        // Use <a> tag for download links instead of Next.js Link
+        if (download) {
+            return (
+                <a
+                    href={href}
+                    download={typeof download === 'string' ? download : true}
+                    className={classes}
+                    target={target}
+                    rel={rel}
+                >
+                    {children}
+                </a>
+            );
+        }
+        
         return (
             <Link
                 href={href}
                 target={target} // Use target here
                 rel={rel} // Use rel here
                 className={classes}
-                download={download ? String(download) : undefined}
             >
                 {children}
             </Link>
