@@ -79,7 +79,7 @@ export default function About() {
                             across cloud platforms, security, and emerging technologies.
                         </p>
                         <div className="flex gap-4 pt-4">
-                            <Button href="/Pano Georgiadis Resume.pdf" download>Résumé</Button>
+                            <Button href="/Pano%20Georgiadis%20Resume.pdf" download>Résumé</Button>
                             <Button href="/contact" variant="outline">Contact Me</Button>
                         </div>
                     </div>
