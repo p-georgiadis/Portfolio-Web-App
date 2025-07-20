@@ -66,7 +66,7 @@ export default function Home() {
                     </h1>
 
                     <h2 className="text-xl md:text-2xl font-mono text-gray-400">
-                        MS Computer Science | Cloud & DevOps Engineer | Microsoft Certified Expert
+                        MS Computer Science | Cloud & DevOps Engineer | AI/ML Specialist
                     </h2>
 
                     <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
