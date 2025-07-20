@@ -11,10 +11,11 @@ export interface Project {
     description: string;
     category: ProjectCategory;
     tags: string[];
-    infrastructure?: string[];
-    techDetails?: {
-        [key: string]: string[];
+    infrastructure: string[];
+    techDetails: {
+        [key: string]: string[];  // This allows any string key with string array values
     };
-    link?: string;
+    link: string;
+    videoDemo?: string;
     isOpenSource?: boolean;
 }

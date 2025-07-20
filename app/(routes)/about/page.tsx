@@ -55,40 +55,31 @@ export default function About() {
                             Cloud Engineer & DevOps Specialist<br/>Proven Infrastructure & Systems Expert
                         </h1>
                         <p className="text-gray-400 text-base md:text-lg leading-relaxed">
-                            Recently graduated Cloud Engineer and DevOps specialist with 6+ years building scalable
-                            infrastructure solutions
-                            as the sole IT professional for a growing business. I hold an MS in Computer Science from
-                            University of Colorado
-                            Boulder (4.0 GPA, May 2025) along with a graduate certificate in Artificial Intelligence and 20+ technical certifications including AWS Solutions
-                            Architect, CKA, LFCS,
-                            and Microsoft Azure Administrator. Now seeking to leverage my comprehensive technical
-                            background and proven
-                            problem-solving abilities in a larger enterprise environment.
+                            Accomplished Cloud Engineer and DevOps specialist with 3+ years building scalable infrastructure solutions as the sole IT professional for a
+                            growing organization. I hold an MS in Computer Science from University of Colorado Boulder (4.0 GPA) along with a graduate certificate in
+                            Artificial Intelligence and 35+ technical certifications including Microsoft Azure DevOps Engineer Expert, AWS Solutions Architect, CKA, LFCS, ITIL,
+                            and 14 CompTIA specializations. Currently applying my comprehensive technical expertise and proven problem-solving abilities in enterprise cloud
+                            environments.
                         </p>
                         <p className="text-gray-400 text-base md:text-lg leading-relaxed">
                             My expertise spans <strong className="text-purple-400">cloud infrastructure &
-                            DevOps</strong> (AWS, Azure, Kubernetes, Docker, Terraform),
+                            DevOps</strong> (AWS, Azure, Kubernetes, Docker, Terraform, Azure Pipelines),
                             <strong className="text-purple-400">CI/CD automation</strong> (GitHub Actions, ArgoCD), and
-                            <strong className="text-purple-400">AI/ML integration</strong> (deep learning, NLP, computer
-                            vision). I have delivered measurable business impact including 90% cost reduction through cloud
-                            migration, 99.9% uptime for critical systems, and hybrid cloud architectures that maintained operations
-                            through major outages.
+                            <strong className="text-purple-400">AI/ML integration</strong> (supervised/unsupervised learning, GANs, CNNs, vector embeddings, sentiment analysis).
+                            I have delivered measurable business impact including 90% cost reduction through cloud migration, 99.9% uptime for critical systems, and hybrid cloud
+                            architectures that maintained operations through major outages.
                         </p>
                         <p className="text-gray-400 text-base md:text-lg leading-relaxed">
-                            Beyond traditional cloud engineering, I deploy innovative ML solutions including CNNs for
-                            medical imaging,
-                            AI-driven financial models, and automated infrastructure workflows. My military
-                            communications background
-                            brings mission-critical reliability standards and exceptional performance under
-                            pressure—experience with
-                            24/7 operations.
+                            Beyond traditional cloud engineering, I deploy innovative ML solutions including CNNs for medical imaging, AI-driven financial models, sentiment analysis
+                            systems, and automated infrastructure workflows using prompt engineering and modern AI techniques. My military communications background brings
+                            mission-critical reliability standards and exceptional performance under pressure—proven experience with 24/7 operations and emergency response.
                         </p>
                         <p className="text-gray-400 text-base md:text-lg leading-relaxed">
-                            As a CompTIA Network of Experts member, I contribute to advancing industry certification
-                            standards.
+                            As a CompTIA Network of Experts member, I contribute to advancing industry certification standards while continuously expanding my technical expertise
+                            across cloud platforms, security, and emerging technologies.
                         </p>
                         <div className="flex gap-4 pt-4">
-                            <Button href="/Pano Georgiadis Résumé.pdf" download>Résumé</Button>
+                            <Button href="/Pano Georgiadis Resume.pdf" download>Résumé</Button>
                             <Button href="/contact" variant="outline">Contact Me</Button>
                         </div>
                     </div>
@@ -109,6 +100,8 @@ export default function About() {
                             specializations={edu.specializations}
                             aiCertificate={edu.aiCertificate}
                             details={edu.details}
+                            mastersDiploma={edu.mastersDiploma} // Add this line
+                            aiCertificateImage={edu.aiCertificateImage} // Add this line
                         />
                     ))}
                 </div>

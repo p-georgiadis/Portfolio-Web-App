@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
 import { Button } from './components/ui/Button'
 import Image from 'next/image'
 import { PageWrapper } from './components/ui/PageWrapper'
-import { DownloadIcon } from 'lucide-react'
+import { Download } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function Home() {
@@ -66,17 +66,17 @@ export default function Home() {
                     </h1>
 
                     <h2 className="text-xl md:text-2xl font-mono text-gray-400">
-                        Recent MS Graduate | Cloud & DevOps Engineer | Infrastructure Specialist
+                        MS Computer Science | Cloud & DevOps Engineer | Microsoft Certified Expert
                     </h2>
 
                     <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
                         I architect and deploy enterprise-grade cloud infrastructure with proven business impact—
                         delivering 90% cost reductions and 99.9% uptime as the sole IT professional for a growing
                         organization.
-                        With a recently completed MS in Computer Science (4.0 GPA) and 20+ certifications spanning AWS,
-                        Azure, Terraform
-                        and Kubernetes, I specialize in building scalable, resilient platforms through intelligent automation,
-                        Infrastructure as Code, and modern DevOps practices.
+                        With an MS in Computer Science (4.0 GPA) and 35+ certifications including Microsoft Azure
+                        DevOps Engineer Expert, AWS Solutions Architect, and 14 CompTIA specializations, I specialize
+                        in building scalable, resilient platforms through intelligent automation, Infrastructure as Code,
+                        and modern DevOps practices.
                     </p>
                     <div className="flex justify-center gap-4 mt-4 md:mt-6">
                         <Button href="/projects" variant="outline">
@@ -91,13 +91,13 @@ export default function Home() {
                     </div>
 
                     <a
-                        href="/Pano Georgiadis Résumé.pdf"
+                        href="/Pano%20Georgiadis%20Resume.pdf"
                         className="inline-flex items-center mt-6 md:mt-8 text-gray-400
                                  hover:text-gray-300 transition-colors group"
                         download
                     >
                         <span>Résumé</span>
-                        <DownloadIcon
+                        <Download
                             className="w-4 h-4 ml-2 transform group-hover:translate-y-0.5 transition-transform"/>
                     </a>
                 </div>

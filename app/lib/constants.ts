@@ -17,6 +17,260 @@ export const PROJECT_CATEGORIES: Record<ProjectCategory, string> = {
 };
 
 export const PROJECTS: Project[] = [
+    // Add these 4 projects to your PROJECTS array:
+
+    {
+        id: "weather-app-eks",
+        title: 'Cloud-Native Weather Application on AWS EKS',
+        description: 'Production-ready weather application deployed on AWS EKS using modern cloud-native best practices. Features Terraform Infrastructure as Code, Tekton CI/CD pipelines, GitOps workflows, and comprehensive security with IRSA and External Secrets Operator. Demonstrates advanced Kubernetes management with EKS Access Entries and pod identity visibility.',
+        category: 'Cloud & Infrastructure',
+        tags: [
+            'AWS EKS',
+            'Terraform',
+            'Kubernetes',
+            'Tekton',
+            'GitOps',
+            'Helm',
+            'Node.js',
+            'IRSA',
+            'ECR',
+            'DevOps'
+        ],
+        infrastructure: [
+            'Amazon EKS with EKS Access Entries (modern auth)',
+            'Amazon ECR with lifecycle policies',
+            'AWS Secrets Manager with External Secrets Operator',
+            'VPC with private subnets and NAT gateways',
+            'IAM Roles for Service Accounts (IRSA)',
+            'EBS CSI Driver with gp3 storage class',
+            'Terraform Cloud for state management',
+            'Kubernetes RBAC with AWS SSO integration'
+        ],
+        techDetails: {
+            backend: [
+                'Node.js Express server',
+                'OpenWeatherMap API integration',
+                'Kubernetes Downward API for pod metadata',
+                'Health and readiness endpoints',
+                'Real-time server information display',
+                'Environment-based configuration'
+            ],
+            frontend: [
+                'Responsive HTML5/CSS3 interface',
+                'Real-time weather data visualization',
+                'Pod identity visibility feature',
+                'Mobile-optimized design',
+                'Font Awesome icons',
+                'Auto-refreshing server information'
+            ],
+            infrastructure: [
+                'Terraform modules for VPC, EKS, ECR',
+                'Helm charts for application deployment',
+                'Tekton pipelines for Kubernetes-native CI/CD',
+                'Kaniko for secure container building',
+                'External Secrets Operator for secret management',
+                'Pod Security Standards enforcement'
+            ],
+            security: [
+                'Zero-trust identity model with IRSA',
+                'Least privilege IAM policies',
+                'Network isolation with private subnets',
+                'Secret management via AWS Secrets Manager',
+                'Pod identity isolation per service',
+                'EKS Access Entries for modern authentication'
+            ]
+        },
+        link: 'https://github.com/p-georgiadis/weather-app',
+        isOpenSource: true,
+    },
+    {
+        id: "terraform-docker-dashboard",
+        title: 'Terraform Multi-Container Infrastructure with Interactive Dashboard',
+        description: 'Local infrastructure demonstration using Terraform to orchestrate multi-container environments with Docker. Features modular Terraform architecture, MySQL database management, and a modern PHP dashboard interface for database operations. Showcases Infrastructure as Code principles in a containerized microservices environment.',
+        category: 'Cloud & Infrastructure',
+        tags: [
+            'Terraform',
+            'Docker',
+            'MySQL',
+            'PHP',
+            'Nginx',
+            'IaC',
+            'Microservices',
+            'WSL2',
+            'DevOps',
+            'Containers'
+        ],
+        infrastructure: [
+            'Docker bridge network for container communication',
+            'MySQL container with persistent data volumes',
+            'Nginx with PHP-FPM for web interface',
+            'Modular Terraform structure',
+            'WSL2 Ubuntu environment',
+            'Container health monitoring',
+            'Automated container lifecycle management'
+        ],
+        techDetails: {
+            backend: [
+                'MySQL 8.0 database container',
+                'PHP 8.1 with Alpine Linux',
+                'Database connection testing scripts',
+                'SQL query execution interface',
+                'Table creation and management',
+                'Error handling and logging'
+            ],
+            frontend: [
+                'Modern dark theme dashboard',
+                'Real-time container status monitoring',
+                'Interactive SQL query interface',
+                'Responsive design for mobile devices',
+                'AJAX-based database operations',
+                'Bootstrap styling framework'
+            ],
+            infrastructure: [
+                'Terraform modules for network, database, web',
+                'Docker provider configuration',
+                'Container dependency management',
+                'Persistent volume configuration',
+                'Port mapping and service discovery',
+                'State management with Terraform'
+            ],
+            devops: [
+                'Infrastructure as Code with Terraform',
+                'Modular architecture for reusability',
+                'Container orchestration with Docker',
+                'Environment variable management',
+                'Automated setup and teardown scripts',
+                'WSL2 integration for Windows development'
+            ]
+        },
+        link: 'https://github.com/p-georgiadis/terraform-docker-php-mysql-dashboard',
+        isOpenSource: true,
+    },
+    {
+        id: "ai-photo-enhancer",
+        title: 'AI-Powered Photo Enhancement with Real-ESRGAN & GFPGAN',
+        description: 'GPU-accelerated photo enhancement application using state-of-the-art AI models for image super-resolution and face restoration. Optimized for RTX 3070 Ti with CUDA acceleration, featuring Real-ESRGAN for general image upscaling and GFPGAN for specialized face enhancement. Includes automated batch processing and memory management for large images.',
+        category: 'Machine Learning & AI',
+        tags: [
+            'Python',
+            'PyTorch',
+            'CUDA',
+            'Real-ESRGAN',
+            'GFPGAN',
+            'Computer Vision',
+            'AI',
+            'GPU',
+            'Deep Learning',
+            'Image Processing'
+        ],
+        infrastructure: [
+            'CUDA 11.8 toolkit for GPU acceleration',
+            'Python 3.11 virtual environment',
+            'PyTorch with CUDA support',
+            'WSL2 Ubuntu 24.04 development environment',
+            'Automated model downloading and caching',
+            'Memory-optimized processing for large images'
+        ],
+        techDetails: {
+            ai_models: [
+                'Real-ESRGAN for 4x image super-resolution',
+                'GFPGAN for face enhancement and restoration',
+                'Automatic model download and management',
+                'GPU memory optimization with tiling',
+                'Batch processing for multiple images',
+                'Support for various image formats'
+            ],
+            performance: [
+                'CUDA acceleration for RTX 3070 Ti (8GB VRAM)',
+                'Automatic memory management and tiling',
+                'Optimized for graduation photo enhancement',
+                'Configurable upscale factors (2x, 4x)',
+                'Face detection and enhancement pipeline',
+                'Efficient batch processing workflow'
+            ],
+            implementation: [
+                'PyTorch 2.0.1 with CUDA 11.8',
+                'OpenCV for image processing',
+                'BasicSR framework integration',
+                'FaceXLib for face analysis',
+                'Command-line interface with options',
+                'Error handling and progress monitoring'
+            ],
+            development: [
+                'Virtual environment isolation',
+                'Comprehensive dependency management',
+                'WSL2 GPU passthrough configuration',
+                'Interactive PyCharm development setup',
+                'Automated setup and verification scripts',
+                'Performance optimization for different GPUs'
+            ]
+        },
+        link: 'https://github.com/p-georgiadis/photo_enhancer',
+        isOpenSource: true,
+    },
+    {
+        id: "tiago-robot-controller",
+        title: 'TIAGo Robot Autonomous Pick-and-Place Controller',
+        description: 'Behavior tree-based autonomous controller for TIAGo robot performing pick-and-place operations in Webots simulator. Features computer vision for object recognition, inverse kinematics for arm control, GPS/compass navigation, and LIDAR-based obstacle avoidance. Demonstrates advanced robotics programming with hierarchical behavior trees and sensor fusion.',
+        category: 'Software Engineering',
+        tags: [
+            'Python',
+            'Robotics',
+            'Webots',
+            'Computer Vision',
+            'Behavior Trees',
+            'LIDAR',
+            'Inverse Kinematics',
+            'OpenCV',
+            'AI',
+            'Simulation'
+        ],
+        infrastructure: [
+            'Webots R2023a robot simulator',
+            'TIAGo robot platform integration',
+            'Python 3.8+ runtime environment',
+            'py_trees behavior tree framework',
+            'OpenCV computer vision pipeline',
+            'ikpy inverse kinematics solver'
+        ],
+        techDetails: {
+            robotics: [
+                'Hierarchical behavior tree architecture',
+                'Computer vision object recognition',
+                'Inverse kinematics with ikpy',
+                'Force-based gripper control',
+                'GPS and compass navigation',
+                'LIDAR obstacle avoidance with 360° scanning'
+            ],
+            ai_vision: [
+                'Multi-sample position averaging for stability',
+                'Camera-to-world coordinate transformation',
+                'Comprehensive 360° environment scanning',
+                'Object detection with position estimation',
+                'Dynamic head positioning for optimal viewing',
+                'Sensor fusion for accurate localization'
+            ],
+            control_systems: [
+                'Reactive navigation with waypoint following',
+                'Collision avoidance using LIDAR sectors',
+                'Adaptive motor control based on obstacles',
+                'Precise arm positioning with joint control',
+                'Gripper force feedback monitoring',
+                'Safe positioning and movement planning'
+            ],
+            performance: [
+                'Object recognition accuracy >95%',
+                'Grasp success rate 100%',
+                'Navigation accuracy ±0.08m',
+                'Path efficiency 85-90%',
+                'Full task completion ~120s',
+                'Robust error handling and recovery'
+            ]
+        },
+        link: 'https://github.com/p-georgiadis/Tiago-Robot-Controller',
+        videoDemo: 'https://www.youtube.com/watch?v=rFbzJMR6La0&t=3s',
+        isOpenSource: true,
+    },
     {
         id: "investprophet",
         title: 'InvestProphet - Stock Price Prediction Platform',
@@ -130,6 +384,7 @@ export const PROJECTS: Project[] = [
             ]
         },
         link: 'https://github.com/yourusername/portfolio-website',
+        isOpenSource: false
     },
     {
         id: "property-calculator",
@@ -278,6 +533,7 @@ export const PROJECTS: Project[] = [
             ]
         },
         link: 'https://github.com/p-georgiadis/Histopathologic-Cancer-Detection',
+        isOpenSource: false
     },
     {
         id: "wine-quality-prediction",
@@ -446,6 +702,7 @@ export const PROJECTS: Project[] = [
             ]
         },
         link: 'https://github.com/p-georgiadis/NLP-Disaster-Tweets',
+        isOpenSource: false
     },
     {
         id: "matrix-factorization-project",
@@ -587,6 +844,7 @@ export const PROJECTS: Project[] = [
             ]
         },
         link: 'https://github.com/p-georgiadis/puzzle-game',
+        isOpenSource: false
     },
     {
         id: "visualization-project",
@@ -861,13 +1119,25 @@ export const SKILLS = {
 
 export const CLOUD_CERTS = [
     {
+        name: "Azure DevOps Engineer Expert",
+        issuer: "Microsoft",
+        imageSrc: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg",
+        link: "https://learn.microsoft.com/en-us/users/p-georgiadis/credentials/685f1dc754ecb7d7",
+    },
+    {
         name: "AWS Solutions Architect",
         issuer: "Amazon Web Services",
         imageSrc: "https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
         link: "https://www.credly.com/badges/8d22badf-d4c4-41e8-b7f6-1a6797ef2c7e",
     },
     {
-        name: "Azure Administrator",
+        name: "Azure Developer Associate",
+        issuer: "Microsoft",
+        imageSrc: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg?branch=main",
+        link: "https://learn.microsoft.com/en-us/users/p-georgiadis/credentials/cdabeec7a4608fce",
+    },
+    {
+        name: "Azure Administrator Associate",
         issuer: "Microsoft",
         imageSrc: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg?branch=main",
         link: "https://learn.microsoft.com/api/credentials/share/en-us/p-georgiadis/43D283DBE1AE2C51?sharingId=F1DDD9D8ACE92FDC",
@@ -896,7 +1166,6 @@ export const CLOUD_CERTS = [
         imageSrc: "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
         link: "https://www.credly.com/badges/8c7eed6e-c9af-4e24-a9b3-b3f41396d03b",
     },
-    // Add cloud certs here
 ];
 
 export const COMPTIA_CERTS = [
@@ -1016,6 +1285,18 @@ export const LINUX_FOUNDATION_CERTS = [
         link: "https://www.credly.com/badges/dda5fb2d-48b3-47c1-8edf-68f73cc3d34b",
     },
     {
+        name: "Source Control Management with Git",
+        issuer: "Linux Foundation",
+        imageSrc: "https://images.credly.com/size/340x340/images/29ad7ced-93b0-4543-b84c-3c6ccc183405/image.png",
+        link: "https://www.credly.com/badges/068e894f-82d6-40e4-bf24-30e261cbf3d4",
+    },
+    {
+        name: "Shell Scripting using Bash",
+        issuer: "Linux Foundation",
+        imageSrc: "https://images.credly.com/images/62ed61bd-120c-487b-8d0f-aea54f414b2b/image.png",
+        link: "https://www.credly.com/badges/1ab6fe59-b7dd-4ae5-97eb-3636d7f07c5a",
+    },
+    {
         name: "Cloud Engineer IT Professional Program",
         issuer: "Linux Foundation",
         imageSrc: "https://images.credly.com/size/340x340/images/2f33ded4-8e5e-442f-997d-2e804740ceab/image.png",
@@ -1087,8 +1368,8 @@ export const EDUCATION = [
         institution: "University of Colorado Boulder",
         logo: "/images/university_of_colorado.png",
         degree: "Master of Science in Computer Science",
-        duration: "Jan 2023 - May 2025", // Updated dates
-        gpa: "4.0", // Add GPA prominently
+        duration: "Jan 2023 - May 2025",
+        gpa: "4.0",
         specializations: [
             "Software Architecture for Big Data",
             "Machine Learning",
@@ -1104,7 +1385,9 @@ export const EDUCATION = [
             "Autonomous Systems & Robotics",
             "Data Mining & Database Systems",
             "Software Architecture & OO Design"
-        ]
+        ],
+        mastersDiploma: "/images/masters-diploma.png",
+        aiCertificateImage: "/images/ai-certificate.png"
     },
     {
         institution: "Udacity",

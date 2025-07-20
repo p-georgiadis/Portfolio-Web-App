@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { X } from "lucide-react";
+import { X, Play } from "lucide-react";
 import { Button } from "@/app/components/ui/Button";
 
 interface ExpandedCardProps {
@@ -10,6 +10,7 @@ interface ExpandedCardProps {
     infrastructure?: string[];
     techDetails?: Record<string, string[]>; // Allow dynamic keys
     link?: string;
+    videoDemo?: string; // Add this line
     onCloseAction: () => void;
 }
 
@@ -68,6 +69,7 @@ export function ExpandedCard({
                                  infrastructure,
                                  techDetails,
                                  link,
+                                 videoDemo, // Add this line
                                  onCloseAction
                              }: ExpandedCardProps) {
     return (
@@ -112,6 +114,31 @@ export function ExpandedCard({
                     <motion.div layoutId={`description-${id}`} className="mb-6">
                         <p className="text-gray-400">{description}</p>
                     </motion.div>
+
+                    {/* Video Demo Section - Add this section */}
+                    {videoDemo && (
+                        <motion.div
+                            className="mb-8"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                        >
+                            <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                                <Play className="w-5 h-5 text-purple-400" />
+                                Video Demonstration
+                            </h3>
+                            <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-800 border border-gray-700">
+                                <iframe
+                                    src={videoDemo.replace('watch?v=', 'embed/').replace('&t=', '?t=')}
+                                    title={`${title} - Video Demonstration`}
+                                    className="w-full h-full"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                />
+                            </div>
+                        </motion.div>
+                    )}
 
                     <motion.div layoutId={`tags-${id}`} className="flex flex-wrap gap-2 mb-8">
                         {tags?.map((tag, i) => (
@@ -176,19 +203,34 @@ export function ExpandedCard({
                                 </motion.div>
                             ))}
 
-                        {link && (
-                            <motion.div className="mt-8">
+                        {/* Updated buttons section to include video demo link */}
+                        <motion.div className="flex flex-wrap gap-4 mt-8">
+                            {link && (
                                 <Button
                                     href={link}
                                     variant="default"
                                     size="md"
-                                    target="_blank" // Open in a new tab
-                                    rel="noopener noreferrer" // Security best practice
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     View on GitHub
                                 </Button>
-                            </motion.div>
-                        )}
+                            )}
+
+                            {videoDemo && (
+                                <Button
+                                    href={videoDemo}
+                                    variant="outline"
+                                    size="md"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-red-600/10 border-red-600/30 text-red-400 hover:bg-red-600/20 hover:border-red-600/50"
+                                >
+                                    <Play className="w-4 h-4 mr-2" />
+                                    Watch on YouTube
+                                </Button>
+                            )}
+                        </motion.div>
                     </motion.div>
                 </motion.div>
             </motion.div>
