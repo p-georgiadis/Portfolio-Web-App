@@ -26,7 +26,12 @@ export default function About() {
     const formatTitle = (title: string) => {
         return title
             .replace(/_/g, ' ') // Replace underscores with spaces
-            .replace(/\b\w/g, char => char.toUpperCase()); // Capitalize each word
+            .replace(/\b\w/g, char => char.toUpperCase()) // Capitalize each word
+            .replace(/\bDevops\b/g, 'DevOps') // Fix DevOps
+            .replace(/\bCicd\b/g, 'CI/CD') // Fix CI/CD
+            .replace(/\bSre\b/g, 'SRE') // Fix SRE
+            .replace(/\bAi\b/g, 'AI') // Fix AI
+            .replace(/\bAnd\b/g, '&'); // Replace And with &
     };
     return (
         <PageWrapper>
@@ -52,31 +57,22 @@ export default function About() {
                     </div>
                     <div className="flex-1 space-y-4">
                         <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent leading-normal overflow-visible pb-1">
-                            Cloud Engineer & DevOps Specialist<br/>Proven Infrastructure & Systems Expert
+                            Cloud DevOps Engineer | Fortune 500<br/>Multi-Cloud Architecture & Security Expert
                         </h1>
                         <p className="text-gray-400 text-base md:text-lg leading-relaxed">
-                            Accomplished Cloud Engineer and DevOps specialist with 3+ years building scalable infrastructure solutions as the sole IT professional for a
-                            growing organization. I hold an MS in Computer Science from University of Colorado Boulder (4.0 GPA) along with a graduate certificate in
-                            Artificial Intelligence and 35+ technical certifications including Microsoft Azure DevOps Engineer Expert, AWS Solutions Architect, CKA, LFCS, ITIL,
-                            and 14 CompTIA specializations. Currently applying my comprehensive technical expertise and proven problem-solving abilities in enterprise cloud
-                            environments.
+                            Cloud DevOps Engineer at The Hanover Insurance Group (Fortune 500) driving enterprise transformation through security-hardened multi-cloud architecture. With 4+ years of experience and an MS in Computer Science from University of Colorado Boulder (4.0 GPA), I specialize in architecting zero-trust infrastructure, achieving regulatory compliance, and delivering extraordinary business value through intelligent automation.
                         </p>
                         <p className="text-gray-400 text-base md:text-lg leading-relaxed">
-                            My expertise spans <strong className="text-purple-400">cloud infrastructure &
-                            DevOps</strong> (AWS, Azure, Kubernetes, Docker, Terraform, Azure Pipelines),
-                            <strong className="text-purple-400">CI/CD automation</strong> (GitHub Actions, ArgoCD), and
-                            <strong className="text-purple-400">AI/ML integration</strong> (supervised/unsupervised learning, GANs, CNNs, vector embeddings, sentiment analysis).
-                            I have delivered measurable business impact including 90% cost reduction through cloud migration, 99.9% uptime for critical systems, and hybrid cloud
-                            architectures that maintained operations through major outages.
+                            <strong className="text-purple-400">Recent Achievement:</strong> Independently architected and deployed comprehensive Oracle Cloud Infrastructure foundation from zero institutional knowledge in just 4 weeks—delivering what typically requires 5-8 enterprise team members over 4-6 months. Achieved 100% CIS benchmark compliance with 73+ Terraform-managed resources, 11 security zones, QRADAR SIEM integration, and 30+ automated security controls, saving over $500,000 versus traditional enterprise approach.
                         </p>
                         <p className="text-gray-400 text-base md:text-lg leading-relaxed">
-                            Beyond traditional cloud engineering, I deploy innovative ML solutions including CNNs for medical imaging, AI-driven financial models, sentiment analysis
-                            systems, and automated infrastructure workflows using prompt engineering and modern AI techniques. My military communications background brings
-                            mission-critical reliability standards and exceptional performance under pressure—proven experience with 24/7 operations and emergency response.
+                            My expertise spans <strong className="text-purple-400">multi-cloud platforms</strong> (AWS, Azure, OCI), <strong className="text-purple-400">security & compliance</strong> (CIS benchmarks, zero-trust, Cloud Guard, Security Zones), <strong className="text-purple-400">Infrastructure as Code</strong> (Terraform, CloudFormation, ARM/Bicep), and <strong className="text-purple-400">enterprise DevOps</strong> (Azure DevOps, GitHub Actions, ArgoCD, CI/CD pipelines). I hold 36+ certifications including Azure DevOps Engineer Expert, AWS Solutions Architect, OCI Architect Associate, CKA, and earned CompTIA Network of Experts recognition.
                         </p>
                         <p className="text-gray-400 text-base md:text-lg leading-relaxed">
-                            As a CompTIA Network of Experts member, I contribute to advancing industry certification standards while continuously expanding my technical expertise
-                            across cloud platforms, security, and emerging technologies.
+                            Previously, I architected AWS infrastructure, Kubernetes deployments, and hybrid cloud solutions as the sole IT professional for a growing organization—achieving 90% cost reduction through cloud migration and 99.9% uptime for critical systems. My military communications background as a Signals Corps Specialist brings mission-critical reliability standards with proven 24/7 operations and emergency response capabilities under pressure.
+                        </p>
+                        <p className="text-gray-400 text-base md:text-lg leading-relaxed">
+                            As a CompTIA Network of Experts member and holder of an Artificial Intelligence Graduate Certificate, I continuously advance cloud security, compliance automation, and enterprise infrastructure excellence—bridging traditional DevOps practices with emerging AI/ML technologies and modern security frameworks.
                         </p>
                         <div className="flex gap-4 pt-4">
                             <Button href="/Pano%20Georgiadis%20Resume.pdf" download>Résumé</Button>
@@ -87,21 +83,16 @@ export default function About() {
                 </div>
             </Section>
 
-            <Section title="Education">
+            <Section title="Experience">
                 <div className="space-y-12">
-                    {EDUCATION.map((edu, index) => (
-                        <EducationCard
+                    {EXPERIENCES.map((experience, index) => (
+                        <ExperienceCard
                             key={index}
-                            logo={edu.logo}
-                            institution={edu.institution}
-                            degree={edu.degree}
-                            duration={edu.duration}
-                            gpa={edu.gpa}
-                            specializations={edu.specializations}
-                            aiCertificate={edu.aiCertificate}
-                            details={edu.details}
-                            mastersDiploma={edu.mastersDiploma} // Add this line
-                            aiCertificateImage={edu.aiCertificateImage} // Add this line
+                            title={experience.title}
+                            company={experience.company}
+                            duration={experience.duration}
+                            details={experience.details}
+                            logo={experience.logo}
                         />
                     ))}
                 </div>
@@ -111,7 +102,7 @@ export default function About() {
                 {/* Cloud & DevOps Certifications */}
                 <div className="space-y-3 md:space-y-6">
                     <h3 className="text-xl md:text-2xl font-semibold text-gray-200">Cloud & DevOps</h3>
-                    <div className="grid grid-cols-3 gap-2 md:flex md:overflow-x-auto md:space-x-4 py-4">
+                    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 py-4">
                         {CLOUD_CERTS.map((cert) => (
                             <CertificationCard
                                 key={cert.name}
@@ -183,15 +174,21 @@ export default function About() {
                 </div>
             </Section>
 
-            <Section title="Experience">
+            <Section title="Education">
                 <div className="space-y-12">
-                    {EXPERIENCES.map((experience, index) => (
-                        <ExperienceCard
+                    {EDUCATION.map((edu, index) => (
+                        <EducationCard
                             key={index}
-                            title={experience.title}
-                            company={experience.company}
-                            duration={experience.duration}
-                            details={experience.details}
+                            logo={edu.logo}
+                            institution={edu.institution}
+                            degree={edu.degree}
+                            duration={edu.duration}
+                            gpa={edu.gpa}
+                            specializations={edu.specializations}
+                            aiCertificate={edu.aiCertificate}
+                            details={edu.details}
+                            mastersDiploma={edu.mastersDiploma}
+                            aiCertificateImage={edu.aiCertificateImage}
                         />
                     ))}
                 </div>

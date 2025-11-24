@@ -1,10 +1,10 @@
 // app/lib/constants.ts
-import { ProjectCategory, Project } from './types';
+import { ProjectCategory, Project, Experience } from './types';
 
 export const SITE_CONFIG = {
     name: 'Pano Georgiadis',
-    role: 'Cloud Engineer | Multi-Cloud Certified | DevOps, AI & Infrastructure Specialist',
-    email: 'pano@pgcloud.dev',
+    role: 'Cloud & DevOps Engineer | M.S. Computer Science | Multi-Cloud Certified | CompTIA Network of Experts',
+    email: 'pgeorgiadis.it@gmail.com',
     github: 'https://github.com/p-georgiadis',
     linkedin: 'https://linkedin.com/in/p-georgiadis',
 }
@@ -17,8 +17,82 @@ export const PROJECT_CATEGORIES: Record<ProjectCategory, string> = {
 };
 
 export const PROJECTS: Project[] = [
-    // Add these 4 projects to your PROJECTS array:
-
+    {
+        id: "oci-foundation-enterprise",
+        title: 'Enterprise-Grade OCI Foundation Implementation',
+        description: 'Architected and deployed comprehensive Oracle Cloud Infrastructure foundation from zero institutional knowledge as sole cloud expert at Fortune 500 insurance company. Delivered production-ready multi-region environment in 4 weeks, achieving 100% CIS benchmark compliance with 73+ Terraform-managed resources, 11 security zones, and full SIEM integration—saving over $500,000 versus traditional enterprise team approach.',
+        category: 'Cloud & Infrastructure',
+        tags: [
+            'Oracle Cloud (OCI)',
+            'Terraform',
+            'Azure DevOps',
+            'CIS Compliance',
+            'QRADAR SIEM',
+            'Security Zones',
+            'Cloud Guard',
+            'Multi-Region',
+            'Enterprise IAM',
+            'IaC'
+        ],
+        infrastructure: [
+            'Oracle Cloud Infrastructure (OCI) multi-region deployment',
+            '73+ Terraform-managed resources across 7 reusable modules',
+            '10-compartment hierarchy with conditional deployments',
+            '11 Security Zones with Maximum Security Recipe (352 total policies)',
+            'Cloud Guard with Oracle-managed detector and responder recipes',
+            '22 event rules across 2 regions for comprehensive monitoring',
+            'QRADAR SIEM integration with Kafka streaming',
+            'Centralized logging infrastructure with service connectors',
+            'Native OCI Object Storage backend for Terraform state'
+        ],
+        techDetails: {
+            infrastructure: [
+                '48 Terraform files organized in 7 production modules',
+                'Finance compartment hierarchy (ARCS, Planning, PaaS, IaaS)',
+                'Security compartment with centralized logging',
+                'Multi-region architecture (primary + secondary)',
+                'Automated compartment provisioning with feature flags',
+                'Native OCI state backend with ETag locking',
+                '90-day state retention with versioning'
+            ],
+            security: [
+                '100% CIS OCI Foundation Benchmark compliance',
+                '30+ automated CIS controls across all categories',
+                '11 Security Zones enforcing Oracle Maximum Security Recipe',
+                'Zero-trust model with default deny quotas',
+                'IAM framework with 11 comprehensive policies',
+                'Break-glass procedures and service account automation',
+                'Multi-region event monitoring (IAM, Network, Cloud Guard)',
+                'QRADAR SIEM with 168-hour retention and SASL auth'
+            ],
+            cicd: [
+                '4 Azure DevOps pipelines (62,538 lines of YAML)',
+                'Main deployment pipeline with Validate → Plan → Apply stages',
+                'Daily drift detection with detailed-exitcode monitoring',
+                'Weekly CIS compliance validation and HTML dashboards',
+                'Controlled destruction pipeline with approval gates',
+                'Automated rollback on failure detection',
+                'Secure credential management via Azure Key Vault'
+            ],
+            governance: [
+                'Operations tag namespace with 3 tags (CostCenter, Environment, Application)',
+                '4 tag default assignments for automatic resource tagging',
+                'Zero-trust quota policies preventing unauthorized resources',
+                'Dynamic IAM group management from CSV',
+                'Active Directory synchronization for enterprise integration',
+                'Comprehensive audit trail with complete logging'
+            ],
+            documentation: [
+                '34 comprehensive documentation files',
+                'Architecture guides, pipeline documentation, security procedures',
+                'QUICKSTART deployment guide and troubleshooting docs',
+                'CIS compliance guides and integration documentation',
+                'Break-glass and service account bootstrap procedures'
+            ]
+        },
+        isOpenSource: false,
+        featured: true,
+    },
     {
         id: "weather-app-eks",
         title: 'Cloud-Native Weather Application on AWS EKS',
@@ -1037,58 +1111,65 @@ export const PROJECTS: Project[] = [
 export const SKILLS = {
     cloud_platforms: [
         'AWS Solutions Architect',
-        'Azure Administrator Associate',
-        'EC2, S3, RDS, Lambda, ECS, EKS',
-        'Azure App Service, Azure Functions, Virtual Machines',
-        'Storage Accounts, Resource Manager, ARM Templates, Bicep',
-        'GCP, Multi-Cloud'
+        'Azure DevOps Engineer Expert, Administrator, Developer',
+        'Oracle Cloud Infrastructure (OCI Architect)',
+        'EC2, EKS, ECS, RDS, Lambda, S3, VPC',
+        'Azure App Service, AKS, Azure Functions, Storage Accounts',
+        'OCI Compartments, Security Zones, IAM',
+        'GCP, Multi-Cloud Architecture'
     ],
     infrastructure_as_code: [
-        'Terraform Associate Certified',
-        'HashiCorp Terraform',
+        'Terraform (Associate Certified)',
         'AWS CloudFormation',
-        'Azure ARM, Azure Bicep',
+        'ARM Templates, Bicep',
+        'Ansible',
+        'GitOps, Policy as Code',
         'Infrastructure Automation',
-        'Policy as Code, GitOps',
-        'Infrastructure Pipelines'
+        'State Management'
     ],
     container_orchestration: [
-        'Kubernetes Administrator (CKA)',
-        'Docker, Helm Charts',
-        'Container Registry, Kubernetes Operators',
-        'Pod Security, Service Mesh',
-        'Container Orchestration, Microservices'
+        'Kubernetes (CKA Certified)',
+        'Docker, Helm',
+        'EKS/AKS/GKE',
+        'Container Registry',
+        'Microservices, Service Mesh',
+        'Pod Security Standards'
     ],
     devops_cicd: [
-        'GitHub Actions, Azure DevOps, Jenkins',
-        'CI/CD Pipelines, Build Automation',
-        'Deployment Automation, Configuration Management',
-        'Ansible, Infrastructure Deployment'
+        'Azure DevOps, GitHub Actions, Jenkins',
+        'ArgoCD',
+        'CI/CD Pipelines',
+        'Blue-Green Deployment',
+        'Configuration Management'
     ],
     security_compliance: [
-        'CompTIA Security+, CompTIA CloudNetX',
-        'Zero Trust, IAM, RBAC',
-        'Network Security, WAF, Security Groups',
+        'Security+ Certified',
+        'Zero Trust, IAM/RBAC, IRSA',
+        'Network Security, CloudTrail, Security Groups',
         'Vulnerability Management',
-        'Compliance (SOC 2, HIPAA)'
+        'SOC 2, HIPAA'
     ],
     linux_systems: [
-        'LFCS Certified, LFCT Certified',
-        'Red Hat, Ubuntu, CentOS',
-        'Shell Scripting, System Administration',
-        'Performance Tuning, Log Management, Troubleshooting'
+        'LFCS/LFCT Certified',
+        'Ubuntu, RHEL, CentOS',
+        'Bash/Shell Scripting',
+        'System Administration',
+        'Performance Tuning',
+        'Network Configuration'
     ],
     monitoring_sre: [
-        'Prometheus, Grafana, ELK Stack',
         'CloudWatch, Azure Monitor',
-        'Observability, Alerting, SLI/SLO',
-        'Incident Management, Site Reliability Engineering'
+        'Prometheus, Grafana, ELK Stack',
+        'Alerting, SLI/SLO',
+        'Incident Response',
+        'Site Reliability Engineering'
     ],
     programming: [
-        'Python, Bash, PowerShell',
-        'JavaScript, Node.js, SQL',
-        'REST APIs, SDK Integration',
-        'Automation Scripts, boto3, Azure SDK'
+        'Python, JavaScript/Node.js',
+        'Bash, PowerShell, SQL',
+        'REST APIs, boto3, Azure SDK',
+        'Git, JSON/YAML',
+        'Database Management'
     ],
     machine_learning_and_ai: [
         'Machine Learning',
@@ -1131,6 +1212,18 @@ export const CLOUD_CERTS = [
         link: "https://www.credly.com/badges/8d22badf-d4c4-41e8-b7f6-1a6797ef2c7e",
     },
     {
+        name: "OCI Architect Associate",
+        issuer: "Oracle",
+        imageSrc: "https://images.credly.com/images/2936a311-fef7-4bf6-b2a8-af808788943a/OCI25CAA_cached_image_20251003-31-z1nj96.png",
+        link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=186BE05EBC4F3AFBD071E334404CF680D4998D76842A7D1D8796492472B742F7",
+    },
+    {
+        name: "OCI Foundations Associate",
+        issuer: "Oracle",
+        imageSrc: "https://images.credly.com/images/06029c72-2e76-476f-96fd-c8f611420c49/OCI25FNDCFAV1_cached_image_20250926-31-s461ee.png",
+        link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=3C6ABDA5CF0686F0E5CBFCFAD51A6380A97C0EA449684ABC6EB511874F6FEED3",
+    },
+    {
         name: "Azure Developer Associate",
         issuer: "Microsoft",
         imageSrc: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg?branch=main",
@@ -1151,7 +1244,7 @@ export const CLOUD_CERTS = [
     {
         name: "HashiCorp Certified: Terraform Associate (003)",
         issuer: "HashiCorp",
-        imageSrc: "https://images.credly.com/size/340x340/images/ed4be915-68f8-428a-b332-40ded9084ee5/blob",
+        imageSrc: "https://images.credly.com/size/340x340/images/0dc62494-dc94-469a-83af-e35309f27356/blob",
         link: "https://www.credly.com/badges/d59182d3-f49e-4d8d-837e-e85e4507cc90",
     },
     {
@@ -1337,7 +1430,20 @@ export const OTHER_CERTS = [
     },
 ];
 
-export const EXPERIENCES = [
+export const EXPERIENCES: Experience[] = [
+    {
+        title: "Cloud DevOps Engineer",
+        company: "The Hanover Insurance Group, Massachusetts (Remote)",
+        duration: "Sep 2025 - Present",
+        logo: "/images/hanover.png",
+        details: [
+            "Multi-Cloud Infrastructure Architecture - OCI Greenfield Deployment: Independently architected and deployed Oracle Cloud Infrastructure (OCI) from zero institutional knowledge as sole cloud expert, delivering production-ready multi-region environment in 4 weeks and saving $500K+ versus external consultants; engineered 73+ infrastructure resources across 48 Terraform files and 7 reusable modules supporting critical business applications.",
+            "Security & Compliance Leadership - Enterprise-Scale Hardening: Single-handedly achieved 100% CIS benchmark compliance across OCI environment, implementing 30+ security controls, 11 isolated security zones, and enterprise IAM architecture; established Azure security baseline with QRADAR SIEM integration and comprehensive monitoring across multi-cloud estate.",
+            "CI/CD Pipeline Operations & Production Support: Maintained 5+ weekly production releases across Azure DevOps pipelines supporting business-critical applications; provided daily technical consultation to senior leadership on cloud architecture decisions and infrastructure optimization strategies.",
+            "Azure Enterprise Infrastructure & Automation: Managed Azure landing zones, hub-spoke networking, and enterprise resource governance supporting organization-wide cloud operations; automated infrastructure provisioning and configuration management reducing manual deployment effort.",
+            "Technical Leadership & Knowledge Transfer: Served as sole cloud infrastructure subject matter expert, providing daily technical guidance to senior leadership and development teams; established cloud best practices and governance frameworks enabling organizational cloud maturity."
+        ],
+    },
     {
         title: "Systems Administrator - Jr. Cloud Engineer", // Updated title
         company: "Meze LLC, Massachusetts",
@@ -1350,9 +1456,9 @@ export const EXPERIENCES = [
         ],
     },
     {
-        title: "Signals Corps Specialist", // Updated title
+        title: "Signals Corps Specialist",
         company: "Greek Army, Central Macedonia, Greece",
-        duration: "Jan 2022 - Dec 2023", // Updated dates
+        duration: "Jan 2022 - Dec 2022",
         details: [
             "Fulfilled mandatory military service requirement as a US-born citizen with dual Greek citizenship, applying technical skills to military communication systems while meeting conscription obligations.",
             "Maintained mission-critical military communication networks with 99.98% uptime requirements in high-pressure tactical environments, developing exceptional troubleshooting skills under extreme time constraints.",

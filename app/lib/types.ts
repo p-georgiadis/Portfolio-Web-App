@@ -18,4 +18,13 @@ export interface Project {
     link: string;
     videoDemo?: string;
     isOpenSource?: boolean;
+    featured?: boolean;
+}
+
+export interface Experience {
+    title: string;
+    company: string;
+    duration: string;
+    details: string[];
+    logo?: string;
 }

@@ -66,17 +66,15 @@ export default function Home() {
                     </h1>
 
                     <h2 className="text-xl md:text-2xl font-mono text-gray-400">
-                        MS Computer Science | Cloud & DevOps Engineer | AI/ML Specialist
+                        Cloud DevOps Engineer | Fortune 500 | MS Computer Science
                     </h2>
 
                     <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
-                        I architect and deploy enterprise-grade cloud infrastructure with proven business impact—
-                        delivering 90% cost reductions and 99.9% uptime as the sole IT professional for a growing
-                        organization.
-                        With an MS in Computer Science (4.0 GPA) and 35+ certifications including Microsoft Azure
-                        DevOps Engineer Expert, AWS Solutions Architect, and 14 CompTIA specializations, I specialize
-                        in building scalable, resilient platforms through intelligent automation, Infrastructure as Code,
-                        and modern DevOps practices.
+                        Cloud DevOps Engineer at Fortune 500 insurance company with 4+ years architecting enterprise-grade infrastructure delivering extraordinary business impact. Recently deployed comprehensive Oracle Cloud Infrastructure foundation in 4 weeks solo—achieving 100% CIS compliance and saving over $500,000 versus traditional enterprise teams.
+                    </p>
+
+                    <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mt-4">
+                        With an MS in Computer Science (4.0 GPA), 36+ certifications including Azure DevOps Engineer Expert, AWS Solutions Architect, OCI Architect, CKA, and CompTIA Network of Experts recognition, I specialize in multi-cloud architecture (AWS, Azure, OCI), security-hardened infrastructure, zero-trust implementation, and enterprise DevOps transformation.
                     </p>
                     <div className="flex justify-center gap-4 mt-4 md:mt-6">
                         <Button href="/projects" variant="outline">

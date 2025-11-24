@@ -57,3 +57,5 @@ next-env.d.ts
 .tmp/
 .cache/
 dist/
+.claude
+CLAUDE.md

@@ -47,7 +47,9 @@ export default function Projects() {
                                     key={project.id}
                                     {...project}
                                     onClickAction={() => setSelectedId(project.id)}
-                                    className="hover:bg-gray-800/50 transition-all hover:-translate-y-1 hover:border-gray-700"
+                                    className={`hover:bg-gray-800/50 transition-all hover:-translate-y-1 hover:border-gray-700 ${
+                                        project.featured ? 'lg:col-span-2' : ''
+                                    }`}
                                 />
                             ))}
                         </div>
@@ -65,7 +67,9 @@ export default function Projects() {
                             key={project.id}
                             {...project}
                             onClickAction={() => setSelectedId(project.id)}
-                            className="hover:bg-gray-800/50 transition-all hover:-translate-y-1 hover:border-gray-700"
+                            className={`hover:bg-gray-800/50 transition-all hover:-translate-y-1 hover:border-gray-700 ${
+                                project.featured ? 'lg:col-span-2' : ''
+                            }`}
                         />
                     ))}
                 </div>
