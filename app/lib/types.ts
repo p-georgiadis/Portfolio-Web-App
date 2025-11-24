@@ -15,7 +15,7 @@ export interface Project {
     techDetails: {
         [key: string]: string[];  // This allows any string key with string array values
     };
-    link: string;
+    link?: string;
     videoDemo?: string;
     isOpenSource?: boolean;
     featured?: boolean;
